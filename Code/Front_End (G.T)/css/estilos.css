@@ -977,7 +977,41 @@ background-color: #f2f2f2ea ;
 
 
 
-
+/*Estilos adicionales */
+.containerOfer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  position: relative;
+  height: 450px;
+  width: 700px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 50px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.display-3 {
+padding: 50px;
+color: rgb(75, 75, 75);
+font-family:'Times New Roman', Times, serif; /* Cambia 'Arial' por el nombre de la fuente que desees */
+}
 
 
 

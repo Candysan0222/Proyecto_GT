@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
-        <link rel="stylesheet" href="/front_end/css/estilos.css">
+        <link rel="stylesheet" href="./css/estilos.css">
 
         <title>GoldenTravel</title>
         <link rel="icon" type="image/png" href="/front_end/img/imgLogos/logo1.png">
@@ -19,60 +19,37 @@
     <body>
 
       <!-- Topbar Start -->
-        <div class="container-fluid px-5 d-none d-lg-block" style="background-color: rgb(4, 4, 94);">
-            <div class="row gx-0">
-                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center" style="height: 45%;">
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                        
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-                    </div>
+        <div class="container-fluid position-relative p-0 bg-secondary">
+            <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                  <!-- <h1 class="m-0"><img src="img/logo1.png" class="img-fluid" alt="Image">GT World</h1> -->
+                  <img src="img/imgLogos/logo.png" alt="Logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                  <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <div class="navbar-nav ms-auto py-0">
+                    <a href="indext.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
+                    <a href="paquetes.html" class="nav-item nav-link">Viajes</a>
+                    <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
+                    <a href="inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
+                      <img src="img/imgIndex/imgLogin.png" alt="Iniciar Sesión" style="width: 50px; height: 50px;">
+                    </a>
+                    
+                  </div>  
                 </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="registro.html"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Registro</small></a>
-                        <a href="inicioSesion.html"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>iniciar sesión</small></a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> Usuario</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> Perfil</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Mis Viajes</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              </nav>
         </div>
         <!-- Topbar End -->
         <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                <!-- <h1 class="m-0"><img src="img/logo1.png" class="img-fluid" alt="Image">GT World</h1> -->
-                <img src="img/imgLogos/logo.png" alt="Logo">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                 <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="indext.html" class="nav-item nav-link">Inicio</a>
-                        <a href="nosotros.html" class="nav-item nav-link active">Nosotros</a>
-                        <a href="informacion.html" class="nav-item nav-link">Paquetes</a>
-                        <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
-                        <a href="paquetes.html" class="nav-item nav-link">Tu Viaje</a>
-                        <a href="tuViaje.html" class="nav-item nav-link">Informacion</a>
-                  </div>
-               </div>
-            </nav>
-        </div>
+        
         <!-- Navbar & Hero End -->
 
         <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
-                <h1 class="text-white display-3 mb-4">Nosotro</h1>
+                <h1 class="text-white display-3 mb-4">Sobre Nosotros</h1>
             </div>
         </div>
         <!-- Header End -->
