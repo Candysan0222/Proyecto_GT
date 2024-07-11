@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/estilos.css">
 
     <title>GoldenTravel</title>
-    <link rel="icon" type="image/png" href="/front_end/img/imgLogos/logo1.png">
+    <link rel="icon" type="image/png" href="./img/imgLogos/logo1.png">
     
  </head>
  <style>
@@ -34,24 +34,33 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto py-0">
-            <a href="indext.html" class="nav-item nav-link active">Inicio</a>
-            <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
-            <a href="paquetes.html" class="nav-item nav-link">Viajes</a>
-            <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
-            <a href="inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
-              <img src="img/imgIndex/imgLogin.png" alt="Iniciar Sesión" style="width: 50px; height: 50px;">
-            </a>
+            <li><a href="#" class="nav-item nav-link"></a></li>
+            <li><a href="nosotros.html" class="nav-item nav-link">Inicio</a></li>
+            <li><a href="nosotros.html" class="nav-item nav-link">Nosotros</a></li>
+            <li><a href="paquetes.html" class="nav-item nav-link">Viajes</a></li>
+            <li><a href="ofertas.html" class="nav-item nav-link">Ofertas</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/imgIndex/imgLogin.png" alt="Iniciar Sesión" style="width: 50px; height: 50px;">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./inicioSesion.html">Iniciar Sesion </a></li>
+                <li><a class="dropdown-item" href="./registro.html">Registrarse</a></li>
+              </ul>
+            </li>
             
           </div>  
         </div>
       </nav>
+
+
       <!-- Carousel Start -->
       <div class="carousel-header">
         <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
           
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <img src="img/sanAgustin.jfif" style="opacity:0.9;" class="img-fluid" alt="Image">
+              <img src="./img/imgLugares/imgLugaresPaquetes/catedraZipaquira.jpg" style="opacity:0.9;" class="img-fluid" alt="Image">
               <div class="carousel-caption">
                 <div class="p-3" style="max-width: 900px;">
                   <h4 class="text-white  mb-4" style="letter-spacing: 3px;">Golden Travel</h4>
