@@ -5,17 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar con Bootstrap</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/estilos2.css">
     
 </head>
 <body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="../" alt="Logo" width="300px" height="auto" class="d-inline-block align-text-top">
-          </a>
+      <div class="container-fluid position-relative p-0 ">
+        <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5  py-lg-0">
+            <a href="" class="navbar-brand p-0">
+              <!-- <h1 class="m-0"><img src="img/logo1.png" class="img-fluid" alt="Image">GT World</h1> -->
+              <img src="img/imgLogos/imagologo.png" width="250px" alt="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav ms-auto ">
+                <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                <a href="nosotros.html" class="nav-item nav-link ">Nosotros</a>
+                <a href="paquetes.html" class="nav-item nav-link">Viajes</a>
+                <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
+                <a href="inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
+                  <img src="img/imgIndex/imgLogin.png" alt="Iniciar Sesión" style="width: 50px; height: 50px;">
+                </a>
+                
+              </div>  
+            </div>
+          </nav>
+      </div>
+      <!-- Carousel Start -->
+      <div class="carousel-header">
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+          
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img src="./img/ktx-3668473_640.jpg"  class="img-fluid" alt="Image">
+              <div class="carousel-caption">
+                <div class="p-3" style="max-width: 900px;">
+                  <h4 class="text-white  mb-4" style="letter-spacing: 3px;">GOLDEN TRAVEL</h4>
+                  <h1 class="display-2 text-white mb-4">Bienvenidos!!!</h1>
+                </div>
+              </div>
+            </div>
+            
+          </div>
         </div>
-    </nav>
+      </div>
+      <!-- Carousel End -->
+    </div>
 
 
 </body>
