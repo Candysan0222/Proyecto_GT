@@ -1,0 +1,59 @@
+
+/*cards del landige page*/
+.containerOfer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.card {
+    position: relative;
+    width: 700px;
+    transition: transform 0.3s;
+    overflow: hidden;
+    border: none;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.card .overlay {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+h2{
+    margin-top: 50px;
+    text-align: center;
+    font-family: new times roman;
+}
+  
+  
