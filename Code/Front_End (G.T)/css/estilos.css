@@ -1,4 +1,4 @@
-/*estilo del los botones de redes sociales de los guias*/
+/*estilo del los botones de redes sociales */
 .btn-square {
   width: 32px;
   height: 32px;
@@ -18,8 +18,6 @@
 
 }
 
-
-
 .btn.btn-light:hover {
   box-shadow: inset 300px 0 0 0 var(--bs-secondary);
   color: var(--bs-light) !important;
@@ -33,13 +31,10 @@
   color: var(--bs-secondary) !important;
 }
 
-/*** Button end ***/
-
 /*estilo para quitar el interlineado de todos los botones y de la barra superior*/
 a {
   text-decoration: none;
 }
-
 
 .bodyInicioSesion {
   display: flex;
@@ -53,9 +48,6 @@ a {
   background-size: cover;
   text-decoration: none;
 }
-
-
-
 
 .inisioSesion {
   position: relative;
@@ -423,10 +415,7 @@ body{
     height: 700% !important;
   }
 
-  .carousel-header .carousel-control-prev .carousel-control-prev-icon,
-  .carousel-header .carousel-control-next .carousel-control-next-icon {
-    opacity: 0;
-  }
+  
 
   .search-bar {
     margin-top: -100%;
@@ -835,16 +824,7 @@ body{
   padding: 50px;
   color: rgb(75, 75, 75);
   font-family: 'Times New Roman', Times, serif;
-  /* Cambia 'Arial' por el nombre de la fuente que desees */
 }
-
-
-
-
-
-
-
-
 
 /*** Footer Start ***/
 .footer {
