@@ -1,0 +1,184 @@
+/*  Vista del landen pages */
+
+.body {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* estilo del los botones de redes sociales */
+.btn-square {
+  width: 32px;
+  height: 32px;
+}
+
+/*transicion de los botones*/
+.btn-square,.btn-sm-square, .btn-md-square, .btn-lg-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*transicion botones de redes sociales*/
+.btn.btn-primary:hover {
+  box-shadow: inset 300px 0 0 0 var(--bs-light) !important;
+  color: var(--bs-secondary) !important;
+}
+
+.navbar-light .navbar-nav .nav-link, .sticky-top.navbar-light, .nadvar-link:hover,
+.nav-link.active .navbar-brand img,.navbar .dropdown-toggle::after {
+  color: var(--bs-black);
+  transition: 0.5s;
+  border: none;
+  font-family: "Font Awesome 5 Free", 'Roboto', sans-serif;
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 8px;
+  padding: 15px 15px;
+  position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0%;
+  left: 0;
+  background: #D98000;
+  transition: 0.5s;
+  z-index: -4;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::before, .navbar-light .navbar-nav {
+  height: calc(100%);
+  left: 1%;
+}
+
+.navbar-light .navbar-nav .nav-link.nav-contact::before {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .navbar-light {
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    height: 80px;
+  }
+
+  .col-lg-8.text-center.text-lg-start.mb-2.mb-lg-0 {
+    margin-block-start: 1%;
+  }
+}
+
+/*Estilos adicionales */
+.containerOfer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.card {
+  position: relative;
+  width: 700px;
+  height: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 50px;
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.display-3 {
+  padding: 50px;
+  color: rgb(75, 75, 75);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-family: new times roman;
+}
+
+/*** Footer Start ***/
+.footer {
+  background: var(--bs-dark);
+}
+
+.footer .footer-item a {
+  line-height: 30px;
+  color: var(--bs-white);
+  transition: 0.5s;
+}
+
+.footer .footer-item a:hover {
+  letter-spacing: 2px;
+  color: var(--bs-primary);
+}
+
+.carousel-header .carousel-inner .carousel-item .carousel-caption {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5));
+}
+
+/* texto del carrusel  */
+.text-white {
+  font-family: "Homer Simpson UI";
+}
+
+
+
+
+
+
