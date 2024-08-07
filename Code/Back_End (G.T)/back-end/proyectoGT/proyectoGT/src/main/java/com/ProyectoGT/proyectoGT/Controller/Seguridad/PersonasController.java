@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ProyectoGT.proyectoGT.Controller.ObjetoT.ObjetoTController;
 import com.ProyectoGT.proyectoGT.Entity.Seguridad.Personas;
 
-@RequestMapping ("/api/v1/proyectoGT/Seguridad/Personas")
+@CrossOrigin(origins = "*")
 @RestController
-@CrossOrigin
+@RequestMapping ("/api/v1/proyectoGT/Seguridad/Personas")
 public class PersonasController extends ObjetoTController<Personas>{
 
 }

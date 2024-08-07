@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ProyectoGT.proyectoGT.Controller.ObjetoT.ObjetoTController;
 import com.ProyectoGT.proyectoGT.Entity.Operacional.Ticket;
 
-@RequestMapping ("/api/v1/proyectoGT/Operacional/Ticket")
+@CrossOrigin(origins = "*")
 @RestController
-@CrossOrigin
+@RequestMapping ("/api/v1/proyectoGT/Operacional/Ticket")
 public class TicketController extends ObjetoTController<Ticket>{
 
 }

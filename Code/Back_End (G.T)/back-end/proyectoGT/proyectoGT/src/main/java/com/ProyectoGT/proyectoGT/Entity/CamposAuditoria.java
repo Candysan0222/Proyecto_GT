@@ -13,7 +13,7 @@ public class CamposAuditoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false, length = 5)
+	@Column(name = "id", nullable = false)
 	private Long id;
 	
 	@Column(name = "estado", nullable = false)
