@@ -5,6 +5,8 @@
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
+  
+  font-family: 'Abril Fatface', cursive;
 }
 
 /* estilo del los botones de redes sociales */
@@ -31,12 +33,12 @@
   color: var(--bs-black);
   transition: 0.5s;
   border: none;
-  font-family: "Font Awesome 5 Free", 'Roboto', sans-serif;
   font-weight: 900;
   vertical-align: middle;
   margin-left: 8px;
   padding: 15px 15px;
   position: relative;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .navbar-light .navbar-nav .nav-link::before {
@@ -49,6 +51,8 @@
   background: #D98000;
   transition: 0.5s;
   z-index: -4;
+  
+  font-family: 'Abril Fatface', cursive;
 }
 
 .navbar-light .navbar-nav .nav-link:hover::before, .navbar-light .navbar-nav {
@@ -136,13 +140,13 @@
 .display-3 {
   padding: 50px;
   color: rgb(75, 75, 75);
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Abril Fatface', cursive;
 }
 
 h2 {
   margin-top: 50px;
   text-align: center;
-  font-family: new times roman;
+  font-family: 'Abril Fatface', cursive;
 }
 
 /*** Footer Start ***/
@@ -174,7 +178,7 @@ h2 {
 
 /* texto del carrusel  */
 .text-white {
-  font-family: "Homer Simpson UI";
+  font-family: 'Abril Fatface', cursive;
 }
 
 .container {
