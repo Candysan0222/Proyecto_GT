@@ -7,5 +7,5 @@ import com.ProyectoGT.proyectoGT.Service.ObjetoT.ObjetoTService;
 
 @Service
 public class PagoService extends ObjetoTService<Pago>{
-
+	
 }

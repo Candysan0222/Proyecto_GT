@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ProyectoGT.proyectoGT.Controller.ObjetoT.ObjetoTController;
 import com.ProyectoGT.proyectoGT.Entity.Parametrizacion.Asientos;
 
-@RequestMapping ("/api/v1/proyectoGT/Parametrizacion/Asientos")
+@CrossOrigin(origins = "*")
 @RestController
-@CrossOrigin
+@RequestMapping ("/api/v1/proyectoGT/Parametrizacion/Asientos")
 public class AsientosController extends ObjetoTController<Asientos>{
 
 }

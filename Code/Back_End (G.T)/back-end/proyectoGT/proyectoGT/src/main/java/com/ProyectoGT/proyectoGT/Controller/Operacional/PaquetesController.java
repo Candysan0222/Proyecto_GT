@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ProyectoGT.proyectoGT.Controller.ObjetoT.ObjetoTController;
 import com.ProyectoGT.proyectoGT.Entity.Operacional.Paquetes;
 
-@RequestMapping ("/api/v1/proyectoGT/Operacional/Paquetes")
+@CrossOrigin(origins = "*")
 @RestController
-@CrossOrigin
+@RequestMapping ("/api/v1/proyectoGT/Operacional/Paquetes")
 public class PaquetesController extends ObjetoTController<Paquetes>{
 
 }

@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.ProyectoGT.proyectoGT.IService.ObjetoT.IObjetoTService;
+import com.ProyectoGT.proyectoGT.Service.ObjetoT.ObjetoTService;
 import com.ProyectoGT.proyectoGT.Utils.ApiResponseDto;
 
 
-
 public class ObjetoTController<T> {
+	
 	@Autowired
-	private IObjetoTService<T> service;
+	private ObjetoTService<T> service;
 	
 	@PostMapping("/")
     public T save(@RequestBody T objeto) throws Exception{
