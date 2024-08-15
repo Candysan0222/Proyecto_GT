@@ -1,107 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Travel - Nosotros</title>
     <link rel="stylesheet" href="../asset/Json/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../asset/css/apartados.css">
+    <link rel="stylesheet" href="../ASSET/css/nosotros.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="">
-        <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5  py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <a href="LandigPages.html"><img src="../asset/img/imgLogos/imagologoblack.png" width="250px" alt="Logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto ">
-                        <a href="LandigPages.html" class="nav-item nav-link ">Inicio</a>
-                        <a href="nosotros.html" class="nav-item nav-link ">Nosotros</a>
-                        <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
-                        <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
-                        <a href="inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
-                            <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión"
-                                style="width: 40px; height: 40px;">
-                        </a>
-                    </div>
-                </div>
-        </nav>
-    </div>
-    <div class="container-fluid about py-5">
-        <div class="">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5">
-                    <div class="h-100"
-                        style="border: 50px solid; border-color: transparent #13357B transparent #13357B;">
-                        <img src="../asset/img/imgLogos/logo (2).png" class="img-fluid w-100 h-100" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-7"
-                    style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">
-                    <h5 class="section-about-title pe-3">SOBRE NOSOTROS</h5>
-                    <h1 class="mb-4">Bienvenidos a <span class="text-primary">GT World</span></h1>
-                    <strong class="text-primary">¡Embárcate en una aventura inolvidable con GT World!</strong></p>
-                    <p class="mb-4">
-                        GT World, somos más que una simple agencia de viajes terrestres.
-                        Somos un equipo apasionado por los viajes y expertos en crear experiencias únicas e
-                        inolvidables para nuestros clientes. Creemos que viajar es una forma de descubrir nuevos
-                        mundos, culturas y personas, y estamos aquí para ayudarte a planificar el viaje perfecto que
-                        te permitirá vivir esos momentos mágicos.</p>
-                    <strong class="text-primary">Te ofrecemos:</strong></p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Atención personalizada
-                            </p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Amplia variedad de
-                                opciones</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Precios competitivos</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Garantía de satisfacción
-                            </p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Confianza y seguridad</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>servicio las 24 horas</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5  py-lg-0 ">
+        <a href="" class="navbar-brand">
+          <a href="LandigPages.html"><img src="../asset/img/imgLogos/imagologoblack.png" width="200px" alt="Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto ">
+              <a href="LandigPages.html" class="nav-item nav-link active">Inicio</a>
+              <a href="nosotros.html" class="nav-item nav-link ">Nosotros</a>
+              <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
+              <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
+              <a href="../formularios/inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
+                <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
+              </a>
+            </div>
+          </div>
+        </a>
+    </nav>
+
+    <!-- Sección de Nosotros -->
+    <section class="container-second">
+        <div class="overlay"></div>
+        <div class="content text-center">
+            <h2>Nosotros</h2>
+            <p>Nuestra página web se enfoca en ofrecer un servicio de alta calidad a nuestros usuarios, considerando sus opiniones y colaboraciones para mejorar su experiencia con nosotros. Nos apasiona compartir y aprender sobre tus experiencias en los destinos y buscamos crecer otras áreas de mejora para brindarte un mejor servicio.</p>
+        </div>
+    </section>
+    
+    
+
+    <!-- Redes sociales -->
+    <h3 class="text-center " style="padding-top: 100px;">Encuéntranos en Redes sociales!</h3>
+    <section class="container mt-5 text-center " style="padding-bottom: 100px;">
+        
+        <div class="row d-flex justify-content-center mt-4 p-3">
+            <div class="col-12 col-md-6 mb-3 p-3">
+                <a href="https://api.whatsapp.com/send?phone=3053550272" class="btn btn-light d-block py-3">
+                    <i class="fab fa-whatsapp"></i> Whatsapp
+                </a>
+            </div>
+            <div class="col-12 col-md-6 mb-3 p-3">
+                <a href="https://www.facebook.com" class="btn btn-light d-block py-3">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </div>
+            <div class="col-12 col-md-6 mb-3 p-3">
+                <a href="https://www.instagram.com" class="btn btn-light d-block py-3">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+            <div class="col-12 col-md-6 mb-3 p-3">
+                <a href="https://www.twitter.com" class="btn btn-light d-block py-3">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
             </div>
         </div>
-    </div>
-    <div class="container-fluid footer" style="background-color: black;">
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="container-fluid footer mt-5" style="background-color: black;">
         <div class="container py-3">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="mb-4 text-white">Ponte en contacto</h4>
                         <a href="https://acortar.link/A7R9TQ"><i class="fas fa-home me-2"></i> Neiva-Huila</a>
-                        <a href=""><i class="fas fa-envelope me-2"></i> CodeByteTravel@gmail.com</a>
-                        <a href="https://api.whatsapp.com/send?phone=3053550272"><i class="fas fa-phone me-2"></i> +57
-                            305 355
-                            0272</a>
-                        <br>
-                        <div class="d-flex align-items-center">
-                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:CodeByteTravel@gmail.com"><i class="fas fa-envelope me-2"></i> CodeByteTravel@gmail.com</a>
+                        <a href="https://api.whatsapp.com/send?phone=3053550272"><i class="fas fa-phone me-2"></i> +57 305 355 0272</a>
+                        <div class="d-flex align-items-center mt-3">
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -117,21 +100,22 @@
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="mb-4 text-white">Soporte</h4>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> contactanos</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Terminos y Condiciones</a>
-                        <a href=""><i class="fas fa-angle-right me-2"></i> Politicas de Privacidad</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Contáctanos</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Términos y Condiciones</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Políticas de Privacidad</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item">
                         <div class="row gy-3 gx-2 mb-4">
-                            <img src="../asset/img/imgLogos/logoBlack.png" alt="">
+                            <img src="../asset/img/imgLogos/logoBlack.png" alt="Logo">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
+    
+    <script src="../asset/Json/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
