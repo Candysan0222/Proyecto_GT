@@ -5,47 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
-    <!-- Añadir Google Fonts -->
+    <link rel="stylesheet" href="../ASSET/css/inicioSesion.css">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body, html {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            height: 100%;
-        }
-
-        .bg {
-            background-image: url('../ASSET/img/imgLugares/ktx-3668473_640.jpg'); /* Reemplaza con tu imagen de fondo */
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .login-container {
-            background-color: rgba(255, 255, 255, 0.712);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgb(255, 255, 255);
-            max-width: 400px;
-            margin: auto;
-        }
-
-        .login-header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .login-header img {
-            max-width: 100px;
-            margin-right: 10px;
-        }
-
-        .login-header h2 {
-            font-family: 'Abril Fatface', cursive;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -64,9 +27,11 @@
                     <label for="password">Contraseña</label>
                     <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
                 </div>
-                <button type="submit" class="btn btn-warning btn-block">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-warning btn-block" onclick="">Iniciar Sesión</button>
                 <div class="text-center mt-3">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <a href="../Pages/olvidarContaseña.html">¿Olvidaste tu contraseña?</a>
+                    <p>No tienes cuenta?, entonces <a href="registro.html">registrate</a></p>
+                    
                 </div>
             </form>
         </div>

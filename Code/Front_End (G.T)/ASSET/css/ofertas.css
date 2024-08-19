@@ -50,7 +50,7 @@
 }
 
 .container-second {
-    background-image: url(../img/imgLugares/paisaje2.jpg);
+    background-image: url(../img/imgLugares/paisaje1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -75,25 +75,47 @@
     z-index: 3; /* Asegura que el contenido esté por encima del overlay */
 }
 
-.offer {
+.card {
     position: relative;
-    margin-bottom: auto;
+    overflow: hidden;
+    border: none;
+    height: 100%;
 }
 
-.offer img {
+.card img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
 }
 
-.offer .discount {
+.discount-label {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #D98000;
+    top: 0;
+    left: 0;
+    background-color: #D98000 ;
     color: white;
     padding: 5px 10px;
-    border-radius: 5px;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-size: 18px;
+}
+
+/* Tamaños fijos para las cartas */
+.large-card {
+    width: 600px;
+    height: 350px;
+}
+
+.small-card {
+    width: 300px;
+    height: 175px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 960px;
 }

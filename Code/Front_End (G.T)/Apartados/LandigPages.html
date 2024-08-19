@@ -1,120 +1,115 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Golden Travel</title>
-  <link rel="stylesheet" href="../asset/Json/node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../asset/css/apartados.css">
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros</title>
+    <link rel="stylesheet" href="../asset/Json/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../ASSET/css/landingPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="container-fluid position-relative p-0 ">  
-    <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5  py-lg-0">
-      <a href="" class="navbar-brand p-0">
-        <a href="LandigPages.html"><img src="../asset/img/imgLogos/imagologoblack.png" width="250px" alt="Logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto ">
-            <a href="LandigPages.html" class="nav-item nav-link active">Inicio</a>
-            <a href="nosotros.html" class="nav-item nav-link ">Nosotros</a>
-            <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
-            <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
-            <a href="../formularios/inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
-              <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
-            </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5  py-lg-0 ">
+        <a href="" class="navbar-brand">
+          <a href="LandigPages.html"><img src="../asset/img/imgLogos/imagologoblack.png" width="200px" alt="Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto ">
+              <a href="LandigPages.html" class="nav-item nav-link active">Inicio</a>
+              <a href="nosotros.html" class="nav-item nav-link ">Nosotros</a>
+              <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
+              <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
+              <a href="../formularios/inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
+                <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
+              </a>
+            </div>
           </div>
-        </div>
+        </a>
     </nav>
-  </div>
-  <!-- Carousel Start -->
-  <div class="carousel-header">
-    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <img src="../asset/img/imgLugares/paisajeCalido2.jpg" class="img-fluid" alt="Image" height="80%">
-          <div class="carousel-caption">
-            <div class="p-3" style="max-width: 900px;">
-              <h4 class="text-white  mb-4" style="letter-spacing: 3px;">GOLDEN TRAVEL</h4>
-              <h1 class="display-2 text-white mb-4">Bienvenidos!</h1>
+
+    <!-- Sección de Nosotros -->
+    <section class="container-second">
+        <div class="overlay"></div>
+        <div class="content text-center">
+            <h2>BIENVENIDOS</h2>
+            <p>A nuestra pagina web oficial de viajes turisticos por el huila y sus alrededores</p>
+            <p>Le tenemos grandiosas ofertas y viajes que le pueden interesar</p>
+        </div>
+    </section>
+    
+    
+
+    <!-- Redes sociales -->
+    <div class="containerCards">
+      <h1>Te ofrecemos :</h1>
+      <div class="cards">
+          <a href="Viajes.html">
+            <div class="card" onclick="location.href='pagina1.html';">
+              <img src="../ASSET/img/imgLugares/Caverna tigre.jpg" alt="Imagen de ejemplo 1">
+              <div class="text">Viajes</div>
+              <div class="overlay">Ver</div>
+            </div>
+          </a>
+          <div class="card" onclick="location.href='pagina2.html';">
+              <img src="../ASSET/img/imgLugares/cueva del tigre.jpg" alt="Imagen de ejemplo 2">
+              <div class="text">Ofertas</div>
+              <div class="overlay">Ver</div>
+          </div>
+      </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <div class="container-fluid footer" style="background-color: black;">
+      <div class="container py-3">
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="mb-4 text-white">Ponte en contacto</h4>
+              <a href="https://acortar.link/A7R9TQ"><i class="fas fa-home me-2"></i> Neiva-Huila</a>
+              <a href=""><i class="fas fa-envelope me-2"></i> CodeByteTravel@gmail.com</a>
+              <a href="https://api.whatsapp.com/send?phone=3053550272"><i class="fas fa-phone me-2"></i> +57 305 355
+                0272</a>
+              <br>
+              <div class="d-flex align-items-center">
+                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="mb-4 text-white">Agencia</h4>
+              <a href="LandigPages.html"><i class="fas fa-angle-right me-2"></i> Inicio</a>
+              <a href="nosotros.html"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
+              <a href="Viajes.html"><i class="fas fa-angle-right me-2"></i> Viajes</a>
+              <a href="ofertas.html"><i class="fas fa-angle-right me-2"></i> Ofertas</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="mb-4 text-white">Soporte</h4>
+              <a href=""><i class="fas fa-angle-right me-2"></i> contactanos</a>
+              <a href=""><i class="fas fa-angle-right me-2"></i> Terminos y Condiciones</a>
+              <a href=""><i class="fas fa-angle-right me-2"></i> Politicas de Privacidad</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item">
+              <div class="row gy-3 gx-2 mb-4">
+                <img src="../asset/img/imgLogos/logoBlack.png" alt="">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Carousel End -->
-  </div>
-  <h2 class="display-3 text-black mb-2">Servicios</h2>
-  <div class="containerOfer">
-    <div class="card">
-      <a href="./ofertas.html">
-        <img src="../asset/img/imgLugares/desierto.jpg" alt="Ofertas">
-        <div class="card-title">Ofertas</div>
-        <div class="overlay">Explora las increíbles ofertas que hemos preparado para ti.</div>
-      </a>
-    </div>
-    <div class="card bg-light">
-      <a href="./paquetes.html">
-        <img src="../asset/img/imgLugares/manoGigante.jpg" alt="Viajes">
-        <div class="card-title">Viajes</div>
-        <div class="overlay">Descubre los viajes que hemos planeado especialmente para ti.</div>
-      </a>
-    </div>
-  </div>
-  <div class="container-fluid footer" style="background-color: black;">
-    <div class="container py-3">
-      <div class="row g-5">
-        <div class="col-md-6 col-lg-6 col-xl-3">
-          <div class="footer-item d-flex flex-column">
-            <h4 class="mb-4 text-white">Ponte en contacto</h4>
-            <a href="https://acortar.link/A7R9TQ"><i class="fas fa-home me-2"></i> Neiva-Huila</a>
-            <a href=""><i class="fas fa-envelope me-2"></i> CodeByteTravel@gmail.com</a>
-            <a href="https://api.whatsapp.com/send?phone=3053550272"><i class="fas fa-phone me-2"></i> +57 305 355
-              0272</a>
-            <br>
-            <div class="d-flex align-items-center">
-              <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-              <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-              <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-              <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xl-3">
-          <div class="footer-item d-flex flex-column">
-            <h4 class="mb-4 text-white">Agencia</h4>
-            <a href="LandigPages.html"><i class="fas fa-angle-right me-2"></i> Inicio</a>
-            <a href="nosotros.html"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
-            <a href="Viajes.html"><i class="fas fa-angle-right me-2"></i> Viajes</a>
-            <a href="ofertas.html"><i class="fas fa-angle-right me-2"></i> Ofertas</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xl-3">
-          <div class="footer-item d-flex flex-column">
-            <h4 class="mb-4 text-white">Soporte</h4>
-            <a href=""><i class="fas fa-angle-right me-2"></i> contactanos</a>
-            <a href=""><i class="fas fa-angle-right me-2"></i> Terminos y Condiciones</a>
-            <a href=""><i class="fas fa-angle-right me-2"></i> Politicas de Privacidad</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-6 col-xl-3">
-          <div class="footer-item">
-            <div class="row gy-3 gx-2 mb-4">
-              <img src="../asset/img/imgLogos/logoBlack.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- Footer End -->
-
-
+    
+    <script src="../asset/Json/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
