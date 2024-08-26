@@ -83,12 +83,12 @@
     justify-content: center;
     min-height: 100vh;
     padding: 50px 0; /* Espacio arriba y abajo */
+
 }
 
 h1 {
-    margin-bottom: 40px;
-    font-size: 36px;
-    color: #333;
+    padding-top: 5%;
+    
 }
 
 .cards {
