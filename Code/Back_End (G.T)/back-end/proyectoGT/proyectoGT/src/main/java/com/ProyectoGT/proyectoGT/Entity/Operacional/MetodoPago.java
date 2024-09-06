@@ -1,4 +1,4 @@
-package com.ProyectoGT.proyectoGT.Entity.Seguridad;
+package com.ProyectoGT.proyectoGT.Entity.Operacional;
 
 import com.ProyectoGT.proyectoGT.Entity.CamposAuditoria;
 

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ProyectoGT.proyectoGT.Controller.ObjetoT.ObjetoTController;
-import com.ProyectoGT.proyectoGT.Entity.Seguridad.MetodoPago;
+import com.ProyectoGT.proyectoGT.Entity.Operacional.MetodoPago;
 
 @CrossOrigin(origins = "*")
 @RestController
