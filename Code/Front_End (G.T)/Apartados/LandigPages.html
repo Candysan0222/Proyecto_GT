@@ -1,79 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Travel</title>
-    <link rel="stylesheet" href="../asset/Json/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../ASSET/css/landingPage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Travel</title>
+  <link rel="stylesheet" href="../asset/Json/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../ASSET/css/landingPage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5  py-lg-0 ">
-      <a href="" class="navbar-brand">
-        <a href="LandigPages.html"><img src="../asset/img/imgLogos/imagologoblack.png" width="200px" alt="Logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-          <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto ">
-            <a href="LandigPages.html" class="nav-item nav-link active">Inicio</a>
-            <a href="nosotros.html" class="nav-item nav-link ">Nosotros</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5 py-lg-0" style="position: sticky; top: 0%; opacity: 0.2;">
+    <a href="LandigPages.html" class="navbar-brand">
+        <img src="../asset/img/imgLogos/imagologoblack.png" width="200px" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" style="opacity: 1;" id="navbarCollapse">
+        <div class="navbar-nav ms-auto" >
+            <a href="LandigPages.html" class="nav-item nav-link itemActivo">Inicio</a>
+            <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
             <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
             <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
             <a href="../formularios/inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
-              <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
+                <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
             </a>
-          </div>
         </div>
-      </a>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Sección de Nosotros -->
-    <section class="container-second">
-        <div class="overlay"></div>
-        <div class="content text-center">
-            <h2>BIENVENIDOS</h2>
-            <p>A nuestra pagina web oficial de viajes turisticos por el huila y sus alrededores</p>
-            <p>Le tenemos grandiosas ofertas y viajes que le pueden interesar</p>
-        </div>
-    </section>
-    
-    
+  <!-- Sección de Nosotros -->
+  <section class="container-fluid" style="padding: 0;">
 
-    <!-- Redes sociales -->
-    <h1 class="text-center">Te ofrecemos:</h1>
-    <div class="card-group" >
-      <div class="card" style="margin: 8%; border-radius: 10px;" onclick="window.location.href='Viajes.html'">
-        <img class="card-img-top" src="../ASSET/img/imgLugares/Caverna tigre.jpg" alt="Card image cap">
-        <div class="card-body overlay">
-          <h5 class="card-title text-center">Viajes</h5>
-          
-        </div>
+    <img src="../ASSET/img/imgLugares/puente.jpg" class="imgNosotros darkened-image-filter">
+    <div class="overlay">
+      <div class="content text-center" style=" color: white;">
+        <h2>BIENVENIDOS</h2>
+        <p>A nuestra pagina web oficial de viajes turisticos por el huila y sus alrededores</p>
+        <p>Le tenemos grandiosas ofertas y viajes que le pueden interesar</p>
       </div>
-      <div class="card" style="margin: 8%; border-radius: 10px;" onclick="window.location.href='ofertas.html'"> 
-        <img class="card-img-top" src="../ASSET/img/imgLugares/cueva del tigre.jpg" alt="Card image cap">
-        <div class="card-body overlay">
-          <h5 class="card-title">Ofertas</h5>
-          
-        </div>
-      </div>
-      
     </div>
 
-    
-    
+  </section>
 
-    <!-- Footer -->
-    <div class="container-fluid footer" style="background-color: black;">
+
+
+  <!-- Redes sociales -->
+  <h1 class="text-center">Te ofrecemos:</h1>
+  <div class="card-group">
+    <div class="card" style="margin: 8%; border-radius: 10px;">
+      <img class="card-img-top" src="../ASSET/img/imgLugares/Caverna tigre.jpg" alt="Card image cap">
+      <div class="card-body overlay">
+        <h5 class="card-title text-center">Viajes</h5>
+
+      </div>
+    </div>
+    <div class="card" style="margin: 8%; border-radius: 10px;" onclick="window.location.href='ofertas.html'">
+      <img class="card-img-top" src="../ASSET/img/imgLugares/cueva del tigre.jpg" alt="Card image cap">
+      <div class="card-body overlay">
+        <h5 class="card-title">Ofertas</h5>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+    &q=Space+Needle,Seattle+WA">
+</iframe> -->
+
+  <!-- Footer -->
+  <!-- <div class="container-fluid footer" style="background-color: black;">
       <div class="container py-3">
         <div class="row g-5">
           <div class="col-md-6 col-lg-6 col-xl-3">
             <div class="footer-item d-flex flex-column">
               <h4 class="mb-4 text-white">Ponte en contacto</h4>
-              <a href="https://acortar.link/A7R9TQ"><i class="fas fa-home me-2"></i> Neiva-Huila</a>
-              <a href=""><i class="fas fa-envelope me-2"></i> CodeByteTravel@gmail.com</a>
+              <a target="_blank" href="https://acortar.link/A7R9TQ"><i class="fas fa-home me-2"></i> Neiva-Huila</a>
+              <a href="mailto:CodeByteTravel@gmail.com"><i class="fas fa-envelope me-2"></i> CodeByteTravel@gmail.com</a>
+              <a href="tel:3028275037"><i class="fas fa-envelope me-2"></i> 3028275037</a>
               <a href="https://api.whatsapp.com/send?phone=3053550272"><i class="fas fa-phone me-2"></i> +57 305 355
                 0272</a>
               <br>
@@ -111,9 +127,80 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+  <footer>
+    <div class="text-center text-white" class="container-fluid footer" style="background-color: black;">
+      <div class="container-fluid">
+        <div class="row justify-content-center" >
+          <div class="col-lg-8 mt-2">
+            <div class="row g-5"style="margin-top: 0.05px;">
+              <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item d-flex flex-column" >
+                  <h4 class="mb-4 text-white">Ponte en contacto</h4>
+                  <a href="https://acortar.link/A7R9TQ"> <img src="../ASSET/img/imgLogos/Img-Figma/casa-icono-silueta (1).png" 
+                    class="imagen-icono te"> <i class="fas fa-home me-2 text-white"></i> Neiva-Huila</a>
+                  <a href="mailto:CodeByteTravel@gmail.com"><img src="../ASSET/img/imgLogos/Img-Figma/mensajes.png" 
+                    class="imagen-icono te"><i class="fas fa-envelope me-2"></i> CodeByteTravel@gmail.com</a>
+                  <a href="tel:3028275037"><img src="../ASSET/img/imgLogos/Img-Figma/ring-phone (2).png" 
+                    class="imagen-icono te"><i class="fas fa-envelope me-2"></i> 3028275037</a>
+                  <!-- <a href="https://api.whatsapp.com/send?phone=3053550272"><i class="fas fa-phone me-2"></i> +57 305 355
+                    0272</a> -->
+                  <br>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-3" style="padding-right: 0%;">
+                <div class="footer-item d-flex flex-column">
+                  <h4 class="mb-4 text-white">Agencia</h4>
+                  <a href="LandigPages.html"> <img src="../ASSET/img/imgLogos/Img-Figma/mas-grande-que.png" 
+                    class="imagen-icono te"><i class="fas fa-angle-right me-2"></i> Inicio</a>
+                  <a href="nosotros.html"><img src="../ASSET/img/imgLogos/Img-Figma/mas-grande-que.png" 
+                    class="imagen-icono te"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
+                  <a href="Viajes.html"><img src="../ASSET/img/imgLogos/Img-Figma/mas-grande-que.png" 
+                    class="imagen-icono te"><i class="fas fa-angle-right me-2"></i> Viajes</a>
+                  <a href="ofertas.html"><img src="../ASSET/img/imgLogos/Img-Figma/mas-grande-que.png" 
+                    class="imagen-icono te"><i class="fas fa-angle-right me-2"></i> Ofertas</a>
+                </div>
+                <br><br>
+                <a href="" class="imagen-icono-abajo" style="margin-left: -50%;"><img src="../ASSET/img/imgLogos/Img-Figma/facebook.png">
+                </a>
+                <a href="" class="imagen-icono-abajo"><img src="../ASSET/img/imgLogos/Img-Figma/instagram.png">
+                </a>
+                <a href="" class="imagen-icono-abajo"><img src="../ASSET/img/imgLogos/Img-Figma/whatsapp.png">
+                </a>
+                <a href="" class="imagen-icono-abajo"><img src="../ASSET/img/imgLogos/Img-Figma/twitter.png">
+                </a>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-3" style="padding-left: 0%;">
+                <div class="footer-item d-flex flex-column">
+                  <h4 class="mb-4 text-white">Soporte</h4>
+                  <a href=""><i class="fas fa-angle-right me-2"><img src="../ASSET/img/imgLogos/Img-Figma/mas-grande-que.png"
+                    class="imagen-icono te"></i> contactanos</a>
+                  <a href=""><i class="fas fa-angle-right me-2"><img src="../ASSET/img/imgLogos/Img-Figma/mas-grande-que.png" 
+                    class="imagen-icono te"></i> Terminos y Condiciones</a>
+                  <a href=""><i class="fas fa-angle-right me-2"><img src="../ASSET/img/imgLogos/Img-Figma/mas-grande-que.png" 
+                    class="imagen-icono te"></i> Politicas de Privacidad</a>
+                </div>
+              </div>
+              
+              <div class="col-md-6 col-lg-6 col-xl-3">
+                <div class="footer-item">
+                  <div class="row gy-3 gx-2 mb-4">
+                    <img src="../asset/img/imgLogos/logoBlack.png" alt="">
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="text-center" style="background-color: black;">
+        
+        </div>
+      </div>
     </div>
-    
-    <script src="../asset/Json/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../ASSET/js/Page.js"></script>
+  </footer>
+
+  <script src="../asset/Json/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../ASSET/js/Page.js"></script>
 </body>
+
 </html>
