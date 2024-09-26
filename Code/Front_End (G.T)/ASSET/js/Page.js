@@ -2,7 +2,7 @@ const cards = Array.from(document.querySelectorAll(".card"));
 const cardsContainer = document.querySelector("#cards");
 
 cardsContainer.addEventListener("mousemove", (e) => {
-  for (const card of cards) {
+  for (const cardNosotros of cards) {
     const rect = card.getBoundingClientRect();
     x = e.clientX - rect.left;
     y = e.clientY - rect.top;
