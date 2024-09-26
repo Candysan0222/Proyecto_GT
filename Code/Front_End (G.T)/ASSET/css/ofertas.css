@@ -1,5 +1,8 @@
 
-
+body{
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family: 'Georgia', serif;
+}
 
 .navbar-light .navbar-nav .nav-link, .sticky-top.navbar-light, .nadvar-link:hover,
 .nav-link.active .navbar-brand img,.navbar .dropdown-toggle::after {
@@ -49,30 +52,34 @@
   }
 }
 
-.container-second {
-    background-image: url(../img/imgLugares/paisaje1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 16.7%;
-    color: aliceblue;
-    position: relative; /* Para mantener el overlay y contenido dentro de esta sección */
-    z-index: 1; /* Debajo del navbar */
+.welcome{
+  background-image: url(../img/imgLugares/puente.jpg);
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 100%;
+  filter: brightness(60%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  /* font-family: 'Abril Fatface', cursive; */
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Negro con opacidad del 50% */
-    z-index: 2; /* Asegura que el overlay esté por encima de la imagen de fondo pero debajo del navbar */
-}
+
 
 .content {
     position: relative;
     z-index: 3; /* Asegura que el contenido esté por encima del overlay */
+}
+
+.itemActivo{
+  background-color: #D98000;
+}
+
+.content {
+  padding:5vh;
+  position: absolute;
+  left: -15vh;
 }
 
 .card {
