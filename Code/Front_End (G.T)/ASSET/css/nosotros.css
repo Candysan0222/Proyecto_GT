@@ -85,6 +85,121 @@ body{
   padding-top: 40vh;
 }
 
+/*Cards*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
+
+
+
+#cards {
+  align-items: center;
+  height: 88vh;
+  width: 100%;
+  padding-inline: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  min-width: 200px;
+  height: 450px;
+  flex: 1  250px;
+  background-color: rgba(206, 206, 206, 0.847);
+  border-radius: 12px;
+  position: relative;
+}
+
+#cards:hover > .card {
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    hsl(var(--color) / 1),
+    rgba(206, 206, 206, 0.878) 40%
+  );
+}
+
+.card-content {
+  height: 450px;
+  position: absolute;
+  inset: 1px;
+  background-color: #d0d0d0;
+  border-radius: inherit;
+}
+
+.card:nth-child(1) {
+  --color: 32 100% 43%;
+}
+.card:nth-child(2) {
+  --color: 32 100% 43%;
+}
+.card:nth-child(3) {
+  --color: 32 100% 43%;
+}
+.card:nth-child(4) {
+  --color: 32 100% 43%; 
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    500px circle at var(--mouse-x) var(--mouse-y),
+    hsl(var(--color) / 0.35),
+    transparent 40%
+  );
+  border-radius: inherit;
+  opacity: 0;
+  z-index: 2;
+}
+
+#cards:hover > .card::before {
+  opacity: 1;
+}
+
+a {
+  cursor: pointer;
+}
+
+.card-content {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.card-content > i {
+  font-size: 10rem;
+  color: #000000;
+}
+
+.card-content > p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card-content > a {
+  width: 90%;
+  padding-block: 0.8rem;
+  background-color:#D98000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+.card-content > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 /*Footer*/
 
 .footer-item{
@@ -126,19 +241,19 @@ a{
   border-radius: 15px;
 }
 .containerOne:hover {
-  background-color: #d62976;
+  background-color: #D98000;
   transition-duration: .3s;
 }
 .containerTwo:hover {
-  background-color: #00acee;
+  background-color: #D98000;
   transition-duration: .3s;
 }
 .containerThree:hover {
-  background-color: #0072b1;
+  background-color: #D98000;
   transition-duration: .3s;
 }
 .containerFour:hover {
-  background-color: #128C7E;
+  background-color: #D98000;
   transition-duration: .3s;
 }
 .socialContainer:active {
@@ -166,3 +281,4 @@ a{
 a{
   text-decoration: none!important;
 }
+

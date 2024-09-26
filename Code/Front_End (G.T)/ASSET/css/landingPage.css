@@ -5,7 +5,7 @@ body{
 }
 
 
-
+/*Navbar*/
 .navbar-light .navbar-nav .nav-link, .sticky-top.navbar-light, .-link:hover,
 .nav-link.active .navbar-brand img,.navbar .dropdown-toggle::after {
   color: var(--bs-black);
@@ -53,6 +53,7 @@ body{
     margin-block-start: 1%;
   }
 }
+/*Finaliza nabvar*/
 
 /* .imgNosotros{
     top: 0;
@@ -82,13 +83,13 @@ body{
 
 
 
-.content {
-    position: relative;
-    z-index: 3; /* Asegura que el contenido esté por encima del overlay */
-}
-
 .itemActivo{
   background-color: #D98000;
+}
+.content {
+  padding:5vh;
+  position: absolute;
+  left: -15vh;
 }
 
 
@@ -172,11 +173,7 @@ body{
   filter: brightness(0.8) blur(2px);
 }
 
-.content {
-  padding:5vh;
-  position: absolute;
-  left: -15vh;
-}
+
 
 .category {
   color: #e1e1e1;
@@ -268,7 +265,5 @@ a{
     opacity: 1;
   }
 }
-a{
-  text-decoration: none!important;
-}
+
 
