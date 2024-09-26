@@ -1,7 +1,14 @@
+body{
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family: 'Georgia', serif;
+}
 
+.content {
+  position: relative;
+  z-index: 3; /* Asegura que el contenido esté por encima del overlay */
+}
 
-
-.navbar-light .navbar-nav .nav-link, .sticky-top.navbar-light, .nadvar-link:hover,
+.navbar-light .navbar-nav .nav-link, .sticky-top.navbar-light, .-link:hover,
 .nav-link.active .navbar-brand img,.navbar .dropdown-toggle::after {
   color: var(--bs-black);
   transition: 0.5s;
@@ -9,8 +16,9 @@
   vertical-align: middle;
   margin-left: 8px;
   padding: 15px 15px;
-  position: relative;
-  font-family: 'Abril Fatface', cursive;
+  position: sticky;
+  /* font-family: 'Abril Fatface', cursive; */
+  opacity: 1;
 }
 
 .navbar-light .navbar-nav .nav-link::before {
@@ -23,8 +31,7 @@
   background: #D98000;
   transition: 0.5s;
   z-index: -4;
-  
-  font-family: 'Abril Fatface', cursive;
+  /* font-family: 'Abril Fatface', cursive; */
 }
 
 .navbar-light .navbar-nav .nav-link:hover::before, .navbar-light .navbar-nav {
@@ -49,51 +56,113 @@
   }
 }
 
-.container-second {
-    background-image: url(../img/imgLugares/paisaje2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 16.7%;
-    color: aliceblue;
-    position: relative; /* Para mantener el overlay y contenido dentro de esta sección */
-    z-index: 1; /* Debajo del navbar */
+.welcome{
+  background-image: url(../img/imgLugares/Termales\ tigre.jpg);
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 100%;
+  filter: brightness(60%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: 'Georgia', serif;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Negro con opacidad del 50% */
-    z-index: 2; /* Asegura que el overlay esté por encima de la imagen de fondo pero debajo del navbar */
-}
+
 
 .content {
     position: relative;
     z-index: 3; /* Asegura que el contenido esté por encima del overlay */
 }
 
-.offer {
-    position: relative;
-    margin-bottom: auto;
+.itemActivo{
+  background-color: #D98000;
 }
 
-.offer img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.wel{
+  padding-top: 40vh;
 }
 
-.offer .discount {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #D98000;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px;
+/*Footer*/
+
+.footer-item{
+  text-align: left;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.cardIcon {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  border-radius: 15px;
+  gap: 10px;
+  /* margin-top: -45px; */
+  margin-top: -15vh;
+}
+
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background: #0F2027;  /* fallback for old browsers */
+  /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027);  */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+  border-radius: 15px;
+}
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+.socialIcon {
+  color: white;
+}
+.socialContainer:hover .socialIcon {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+a{
+  text-decoration: none!important;
 }

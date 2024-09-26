@@ -73,7 +73,7 @@ body{
   left: 0;
   height: 90vh;
   width: 100%;
-  filter: brightness(70%);
+  filter: brightness(60%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
@@ -195,7 +195,7 @@ body{
 }
 
 a{
-  text-decoration: none;
+  text-decoration: none!important;
   color: white;
 }
 
@@ -217,9 +217,6 @@ a{
   margin-top: -15vh;
 }
 
-a{
-  text-decoration: none!important;
-}
 .socialContainer {
   width: 52px;
   height: 52px;
@@ -271,3 +268,7 @@ a{
     opacity: 1;
   }
 }
+a{
+  text-decoration: none!important;
+}
+
