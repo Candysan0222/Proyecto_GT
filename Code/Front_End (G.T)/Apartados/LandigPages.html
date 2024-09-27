@@ -27,7 +27,7 @@
         <div class="navbar-nav ms-auto" >
             <a href="LandigPages.html" class="nav-item nav-link itemActivo">Inicio</a>
             <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
-            <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
+            <a href="javascript:void(0);" class="nav-item nav-link" onclick="showLoaderAndRedirect('Viajes.html')">Viajes</a>
             <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
             <a href="../formularios/inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
                 <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
@@ -36,7 +36,11 @@
     </div>
 </nav>
 
-
+<div class="loader" id="loader" style="display:none;"></div>
+  <span class="hour"></span>
+  <span class="min"></span>
+  <span class="circel"></span>
+</div>
 
   <!-- Sección de Nosotros -->
   <section class="container-fluid" style="padding: 0;">
@@ -81,18 +85,6 @@
 
     </div>
   </section>
-  
-
-  <!-- <iframe
-  width="600"
-  height="450"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-    &q=Space+Needle,Seattle+WA">
-</iframe> -->
 
   
   <footer>
@@ -117,7 +109,7 @@
                   <h4 class="mb-4 text-white">Agencia</h4>
                   <a href="LandigPages.html"> <i class="fas fa-angle-right me-2"></i> Inicio</a>
                   <a href="nosotros.html"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
-                  <a href="Viajes.html"><i class="fas fa-angle-right me-2"></i> Viajes</a>
+                  <a href="Viajes.html" ><i class="fas fa-angle-right me-2"></i> Viajes</a>
                   <a href="ofertas.html"><i class="fas fa-angle-right me-2"></i> Ofertas</a>
                 </div>
                 <br><br>
