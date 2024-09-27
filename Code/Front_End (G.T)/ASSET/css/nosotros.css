@@ -1,284 +1,74 @@
-body{
-  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-  font-family: 'Georgia', serif;
-}
-
-.content {
-  position: relative;
-  z-index: 3; /* Asegura que el contenido esté por encima del overlay */
-}
-
-.navbar-light .navbar-nav .nav-link, .sticky-top.navbar-light, .-link:hover,
-.nav-link.active .navbar-brand img,.navbar .dropdown-toggle::after {
-  color: var(--bs-black);
-  transition: 0.5s;
-  border: none;
-  vertical-align: middle;
-  margin-left: 8px;
-  padding: 15px 15px;
-  position: sticky;
-  /* font-family: 'Abril Fatface', cursive; */
-  opacity: 1;
-}
-
-.navbar-light .navbar-nav .nav-link::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0;
-  bottom: 0%;
-  left: 0;
-  background: #D98000;
-  transition: 0.5s;
-  z-index: -4;
-  /* font-family: 'Abril Fatface', cursive; */
-}
-
-.navbar-light .navbar-nav .nav-link:hover::before, .navbar-light .navbar-nav {
-  height: calc(100%);
-  left: 1%;
-}
-
-.navbar-light .navbar-nav .nav-link.nav-contact::before {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  .navbar-light {
-    width: 100%;
-    z-index: 999;
-    background-color: white;
-    height: 80px;
-  }
-
-  .col-lg-8.text-center.text-lg-start.mb-2.mb-lg-0 {
-    margin-block-start: 1%;
-  }
-}
-
-.welcome{
-  background-image: url(../img/imgLugares/Termales\ tigre.jpg);
-  top: 0;
-  left: 0;
-  height: 90vh;
-  width: 100%;
-  filter: brightness(60%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; 
-  /* font-family: 'Abril Fatface', cursive; */
-  font-family: 'Georgia', serif;
-}
-
-
-
-.content {
-    position: relative;
-    z-index: 3; /* Asegura que el contenido esté por encima del overlay */
-}
-
-.itemActivo{
-  background-color: #D98000;
-}
-
-.wel{
-  padding-top: 40vh;
-}
-
-/*Cards*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-
-
-
-
-#cards {
-  align-items: center;
-  height: 88vh;
-  width: 100%;
-  padding-inline: 20px;
+.cards-container {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5em;
   flex-wrap: wrap;
-  gap: 30px;
+  padding: 2vh;
+  height: 80vh;
 }
 
 .card {
-  min-width: 200px;
-  height: 450px;
-  flex: 1  250px;
-  background-color: rgba(206, 206, 206, 0.847);
-  border-radius: 12px;
+  --bg: #f7f7f8;
+  --hover-bg: #D98000;
+  max-width: 23ch;
+  height: 50vh;
+  text-align: center;
+  background: var(--bg);
+  padding: 1.5em;
+  padding-block: 1.8em;
+  border-radius: 5px;
   position: relative;
+  overflow: hidden;
+  transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
-#cards:hover > .card {
-  background: radial-gradient(
-    400px circle at var(--mouse-x) var(--mouse-y),
-    hsl(var(--color) / 1),
-    rgba(206, 206, 206, 0.878) 40%
-  );
+.card__body {
+  color: #464853;
+  line-height: 1.5em;
+  font-size: 1em;
 }
 
-.card-content {
-  height: 450px;
+.card > :not(span) {
+  transition: .3s cubic-bezier(.6,.4,0,1);
+}
+
+.card > a.cards {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -.035em;
+}
+
+.card span {
   position: absolute;
-  inset: 1px;
-  background-color: #d0d0d0;
-  border-radius: inherit;
-}
-
-.card:nth-child(1) {
-  --color: 32 100% 43%;
-}
-.card:nth-child(2) {
-  --color: 32 100% 43%;
-}
-.card:nth-child(3) {
-  --color: 32 100% 43%;
-}
-.card:nth-child(4) {
-  --color: 32 100% 43%; 
-}
-
-.card::before {
-  content: "";
-  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all .3s cubic-bezier(.6,.4,0,1);
+}
+
+.card:hover span {
   top: 0;
-  left: 0;
-  background: radial-gradient(
-    500px circle at var(--mouse-x) var(--mouse-y),
-    hsl(var(--color) / 0.35),
-    transparent 40%
-  );
-  border-radius: inherit;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: var(--hover-bg);
+}
+
+.card:hover > div,
+.card:hover > strong {
   opacity: 0;
-  z-index: 2;
 }
-
-#cards:hover > .card::before {
-  opacity: 1;
-}
-
-a {
-  cursor: pointer;
-}
-
-.card-content {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 18px;
-  align-items: center;
-}
-
-.card-content > i {
-  font-size: 10rem;
-  color: #000000;
-}
-
-.card-content > p {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.card-content > a {
-  width: 90%;
-  padding-block: 0.8rem;
-  background-color:#D98000;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  z-index: 10;
-}
-.card-content > a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-/*Footer*/
-
-.footer-item{
-  text-align: left;
-}
-
-a{
-  text-decoration: none;
-  color: white;
-}
-
-
-.cardIcon {
-  width: fit-content;
-  height: fit-content;
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 0px;
-  border-radius: 15px;
-  gap: 10px;
-  /* margin-top: -45px; */
-  margin-top: -15vh;
-}
-
-
-.socialContainer {
-  width: 52px;
-  height: 52px;
-  background: #0F2027;  /* fallback for old browsers */
-  /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027);  */
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition-duration: .3s;
-  border-radius: 15px;
-}
-.containerOne:hover {
-  background-color: #D98000;
-  transition-duration: .3s;
-}
-.containerTwo:hover {
-  background-color: #D98000;
-  transition-duration: .3s;
-}
-.containerThree:hover {
-  background-color: #D98000;
-  transition-duration: .3s;
-}
-.containerFour:hover {
-  background-color: #D98000;
-  transition-duration: .3s;
-}
-.socialContainer:active {
-  transform: scale(0.9);
-  transition-duration: .3s;
-}
-.socialIcon {
-  color: white;
-}
-.socialContainer:hover .socialIcon {
-  animation: slide-in-top 0.3s both;
-}
-
-@keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-a{
-  text-decoration: none!important;
-}
-

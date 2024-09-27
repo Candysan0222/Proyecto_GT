@@ -11,3 +11,15 @@ cardsContainer.addEventListener("mousemove", (e) => {
     card.style.setProperty("--mouse-y", `${y}px`);
   }
 });
+
+/****Redirige loader */
+function showLoaderAndRedirect(url) {
+  // Muestra el loader
+  document.getElementById('loader').style.display = 'block';
+
+  // Espera 3 segundos antes de redirigir
+  setTimeout(function() {
+    window.location.href = url; // Redirige a la URL proporcionada
+  }, 3000);
+}
+
