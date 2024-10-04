@@ -10,25 +10,33 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5  py-lg-0 ">
+    <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5 py-lg-0">
         <a href="" class="navbar-brand">
-          <a href="LandigPages.html"><img src="../asset/img/imgLogos/imagologoblack.png" width="200px" alt="Logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="fa fa-bars"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto ">
-              <a href="LandigPages.html" class="nav-item nav-link active">Inicio</a>
-              <a href="nosotros.html" class="nav-item nav-link ">Nosotros</a>
-              <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
-              <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
-              <a href="../formularios/inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
-                <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
-              </a>
+            <a href="LandigPages.html"><img src="../asset/img/imgLogos/imagologoblack.png" width="200px" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="LandigPages.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
+                    <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
+                    <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
+                    <div class="dropdown">
+                        <button class="nav-item nav-link dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" style="display: inline-block; width: 11vh;">
+                            <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px; align-content: center;">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="../formularios/inicioSesion.html">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="../formularios/registrarse.html">Registrar Usuario</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </a>
     </nav>
+    
+    
 
     <!-- Sección de Nosotros -->
     <section class="container-fluid" style="padding: 0;">

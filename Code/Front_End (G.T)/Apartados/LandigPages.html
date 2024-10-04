@@ -24,17 +24,26 @@
         <span class="fa fa-bars"></span>
     </button>
     <div class="collapse navbar-collapse" style="opacity: 1;" id="navbarCollapse">
-        <div class="navbar-nav ms-auto" >
+        <div class="navbar-nav ms-auto">
             <a href="LandigPages.html" class="nav-item nav-link itemActivo">Inicio</a>
             <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
             <a href="javascript:void(0);" class="nav-item nav-link" onclick="showLoaderAndRedirect('Viajes.html')">Viajes</a>
             <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
-            <a href="../formularios/inicioSesion.html" class="nav-item nav-link" style="display: inline-block;">
-                <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
-            </a>
+            
+            <!-- Dropdown -->
+            <div class="nav-item dropdown">
+                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="../formularios/inicioSesion.html">Iniciar Sesión</a></li>
+                    <li><a class="dropdown-item" href="../formularios/registro.html">Registrar Usuario</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
+
 
 <div class="loader" id="loader" style="display:none;"></div>
   <span class="hour"></span>

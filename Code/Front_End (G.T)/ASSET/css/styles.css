@@ -2,7 +2,16 @@ body{
     /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-family: 'Georgia', serif;
   }
-  
+  /* Mostrar el dropdown al pasar el ratón */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Asegura que no haya espacio entre el botón y el menú */
+    margin-left: -12vh;
+  }
+
+  .dropdown{
+    width: 12vh;
+  }
   
   /*Navbar*/
   .navbar-light .navbar-nav .nav-link, .sticky-top.navbar-light, .-link:hover,
