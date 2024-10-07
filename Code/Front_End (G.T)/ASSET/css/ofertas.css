@@ -58,12 +58,12 @@ body{
 }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
+  position:relative;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1;
   margin-top: 10px;
+  margin-left: -80px;
 }
 
 .dropdown:hover .dropdown-menu {

@@ -1,24 +1,28 @@
 body, html {
     margin: 0;
-    font-family: Arial, sans-serif;
     height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 .bg {
-    background-image: url('../img/imgLugares/Caverna\ tigre.jpg'); /* Reemplaza con tu imagen de fondo */
-    height: 100%;
+    background-image: url('../img/imgLugares/Salto\ tigre.jpg');
+    height: 100vh;  /* Ocupa toda la pantalla */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-container {
-    background-color: rgba(255, 255, 255, 0.712);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    max-width: 400px;
-    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con ligera transparencia */
+    padding: 30px; 
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    max-width: 400px; /* Más pequeño que el registro */
+    width: 100%;
+    margin: 20px;
 }
 
 .login-header {
@@ -33,4 +37,25 @@ body, html {
 
 .login-header h2 {
     font-family: 'Abril Fatface', cursive;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-block {
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.text-center a {
+    font-size: 0.9em;
+    display: block;
+    margin-top: 10px;
+}
+
+.text-center p {
+    margin-top: 15px;
+    font-size: 0.9em;
 }
