@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Travel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <meta name="google-signin-client_id"
+    content="967811303176-54140v5oids65e50h9dd41qh3rl1lhvq.apps.googleusercontent.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../../../asset/Json/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../asset/css/Client/InformacionViaje.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5 py-lg-0" style="position: sticky; top: 0;">
+        <a href="../../../Apartados/LandingPages.html" class="navbar-brand">
+            <img src="../../../asset/img/imgLogos/imagologoblack.png" width="200px" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" style="opacity: 1;" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+                <a href="../LandigPages.html" class="nav-item nav-link">Inicio</a>
+                <a href="../Nosotros.html" class="nav-item nav-link">Nosotros</a>
+                <a href="../Viajes.html" class="nav-item nav-link itemActivo">Viajes</a>
+                <a href="../ofertas.html" class="nav-item nav-link">Ofertas</a>
+
+                <div class="nav-item nav-link login-dropdown">
+                    <img src="../../../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión"
+                        style="width: 40px; height: 40px;">
+                    <div class="dropdown-menu" style="right: 5%; padding-bottom: 25%;">
+
+                        <!-- //  Menu Principal  \\ -->
+
+                        <a><img src="../../../ASSET/img/imgLogos/usuario (1).png"
+                                style="padding-left: 35%; padding-bottom: 5%; padding-top: 5%;"></a>
+                        <a href="#" class="dropdown-item" id="Iniciar" onclick="toggleSubMenu('Iniciar')">Iniciar
+                            sesión</a>
+                        <a href="#" class="dropdown-item" id="Registrar" onclick="toggleSubMenu('Registrar')">Registrar
+                            usuario</a>
+                    </div>
+
+                    <!-- //  Inisiar Sesión \\ -->
+
+                    <div class="sub-menu" id="subIniciar"
+                        style="display: none; top: 180px; height: 280%; border-radius: 15px;">
+                        <a class="title">Iniciar sesión</a>
+                        <!-- <div class="g-signin2" data-onsuccess="onSignIn">Acceder con Google</div> -->
+                        <a class="dropdown-item" href="#" class="g-signin2"> <img
+                                src="../../../ASSET/img/imgLogos/buscar (1).png" style="margin-right: 3%;"
+                                onclick="signInWithGoogle()">Acceder con Google</a>
+                        <a class="dropdown-item" href="#"><img src="../../../ASSET/img/imgLogos/facebook (1).png"
+                                style="margin-right: 3%;" onclick="loginWithFacebook()">Acceder con Facebook</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><img
+                                src="../../../ASSET/img/imgLogos/correo.png" style="margin-right: 3%;">Acceder con tu
+                            Gmail</a>
+                    </div>
+
+                    <!-- //  Registrar Usuario \\ -->
+
+                    <div class="sub-menu" id="subRegistrar"
+                        style="display: none; top: 220px; height: 280%; border-radius: 15px;">
+                        <a class="title">Registrar usuario</a>
+                        <a class="dropdown-item" href="#"><img src="../../../ASSET/img/imgLogos/buscar (1).png"
+                                style="margin-right: 3%;" onclick="signInWithGoogle()">Registrar con Google</a>
+                        <a class="dropdown-item" href="#"><img src="../../../ASSET/img/imgLogos/facebook (1).png"
+                                style="margin-right: 3%;" onclick="loginWithFacebook()">Registrar con Facebook</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal"><img
+                                src="../../../ASSET/img/imgLogos/correo.png" style="margin-right: 3%;">Registrar con tu
+                            Gmail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Iniciar Sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header justify-content-between">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-center">
+                    <img src="../../../ASSET/img/imgLogos/usuario (1).png" alt="Icono de usuario"
+                        style="width: 20%; margin-bottom: 5%;">
+                    <label style="color: white;">¿Cuál es tu Gmail?</label>
+                    <div class="input-field mb-3 w-100">
+                        <input type="email" required spellcheck="false" id="email">
+                        <label>tu-Gmail@gmail.com
+                            <img src="../../../ASSET/img/imgLogos/Img-Figma/correo-electronico.png" alt="Icono de correo"
+                                style="width: 30px;">
+                        </label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" required id="password">
+                        <span>ingresa tu contraseña</span>
+                        <div id="toggle" onclick="showHide()"></div>
+                    </div>
+                </div>
+                <div class="mb-3 w-100" style="padding-left: 18%;">
+                    <div class="g-recaptcha" data-sitekey="6LdYJFUqAAAAAFcCzwv7FJ4V8uuzYEbLJEhnRFYF"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="signInWithGoogle()">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Registrar Usuario -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header justify-content-between"> <!-- Cambiado a justify-content-between -->
+                    <h5 class="modal-title" id="registerModalLabel">Registrar usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-center">
+                    <div class="mb-3 w-100">
+                        <!-- <input type="email" class="form-control" id="emailInput" placeholder="tu-email@gmail.com" required> -->
+                        <div class="input-field">
+                            <input type="text" required spellcheck="false">
+                            <label>tu-Gmail@gmail.com <img
+                                    src="../../../ASSET/img/imgLogos/Img-Figma/correo-electronico.png"
+                                    style="width: 30px;"></label>
+                        </div>
+                    </div>
+                    <div class="mb-3 w-100" style="padding-left: 18%;">
+                        <div class="g-recaptcha" data-sitekey="6LdYJFUqAAAAAFcCzwv7FJ4V8uuzYEbLJEhnRFYF"></div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" onclick="signInWithGoogle()">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de descripcion del viaje -->
+    <section class="container-fluid" style="padding: 0; display: flex;">
+        <div class="image-gallery"
+            style="flex: 1; display: flex; flex-direction: column; align-items: center; padding: 5%;">
+
+            <!-- Imagen grande -->
+            <img src="../../../ASSET/img/imgLugares/Cavernatigre.jpg" alt="Caverna del Tigre" 
+                style="width: 100%; height: auto; cursor: pointer;" onclick="openModal(0)" />
+            
+            <div class="small-images"
+                style="display: flex; justify-content: space-between; width: 100%; padding-top: 10px;">
+                <img src="../../../ASSET/img/imgLugares/cuevadeltigre.jpg" alt="Imagen pequeña 1" 
+                    style="width: 30%; height: auto; cursor: pointer;" onclick="openModal(1)" />
+                <img src="../../../ASSET/img/imgLugares/cuevadeltigre.jpg" alt="Imagen pequeña 2" 
+                    style="width: 30%; height: auto; cursor: pointer;" onclick="openModal(2)" />
+                <img src="../../../ASSET/img/imgLugares/cuevadeltigre.jpg" alt="Imagen pequeña 3" 
+                    style="width: 30%; height: auto; cursor: pointer;" onclick="openModal(3)" />
+            </div>
+        </div>
+
+        <div class="welcome" style="flex: 2; padding: 5%;">
+            <h2 class="text-center text-white wel" style="padding-top: 5%; padding-bottom: 5%; font-size: 50px;">
+                Caverna del Tigre
+            </h2>
+            <p class="text-center text-white"
+                style="padding: 2%; margin-left: 10%; margin-right: 10%; font-size: 30px;">
+                Descubre la mágica Cueva de los Guácharos, un destino turístico imperdible en el corazón del Huila,
+                Colombia. Ubicada cerca del encantador municipio de Llaguara, esta cueva ofrece una experiencia única de
+                aventura y conexión con la naturaleza.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div id="imageModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.8);">
+        <span onclick="closeModal()" style="color: white; font-size: 40px; cursor: pointer; position: absolute; top: 20px; right: 30px;">&times;</span>
+        <img id="modalImage" style="display: block; margin: auto; max-width: 90%; max-height: 90%; padding-top: 60px;" />
+        <button id="prevBtn" onclick="changeImage(-1)" style="position: absolute; top: 50%; left: 30px; color: white; background: none; border: none; font-size: 40px; cursor: pointer;">&#10094;</button>
+        <button id="nextBtn" onclick="changeImage(1)" style="position: absolute; top: 50%; right: 30px; color: white; background: none; border: none; font-size: 40px; cursor: pointer;">&#10095;</button>
+    </div>
+
+    <h2 class="text-center" style="padding: 2%; margin-left: 10%; margin-right: 10%;">
+        Informacion del viaje a la cueva de los Guácharos
+    </h2>
+    <div class="row">
+        <div class="col-md-6 text-end" style=" text-align: left !important;"> <!-- Alinea a la derecha -->
+            <p style="padding: 2%; margin-right: 10%; margin-left: 10%; width: 50%;">
+                El viaje partirá desde el terminal de Neiva. Tomaremos la vía norte,
+                utilizando la vía cincunvalar para salir por el Puente del Triunfo hacia Palermo.
+                <br>
+                Después de llegar al cruce (ronvoy), nos desviaremos por el camino a Llaguara.
+                Luego, tras recorrer aproximadamente 10 kilómetros,
+                ingresaremos por una trocha hacia la Cueva de los Guácharos.
+                <br>
+                Una vez en la cueva, se ofrecerá una merienda, y después nos dirigiremos a explorar sus maravillosos
+                alrededores.
+            </p>
+        </div>
+        <div class="col-md-6 text-start" style="padding-left: 10%;"> <!-- Alinea a la izquierda -->
+            <h2>Fecha del Viaje:</h2>
+            <p>29/10/2024</p>
+        </div>
+    </div>
+    <div class="text-center mt-4" style="margin-bottom: 24px;">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservarViajeModal">Reservar Viaje</button>
+    </div>
+
+    <!-- //  Modal   \\ -->
+    <div class="modal fade reservar-viaje-modal" id="reservarViajeModal" tabindex="-1" aria-labelledby="reservarViajeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h2>Reservar viaje</h2>
+                <div>
+                    <label>Total de ocupantes</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                    <label>Cantidad de Niños</label>
+                    <select>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Cantidad de adultos</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <h3>Información del transporte</h3>
+                <div>
+                    <label>Bus:</label>
+                    <span>Coomotor de 2 pisos</span>
+                </div>
+                <div>
+                    <img src="https://placehold.co/100x50" alt="Imagen de un bus de dos pisos">
+                </div>
+                <h3>Seleccionar asientos</h3>
+                <div>
+                    <label>Piso:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                    <label>Asiento:</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div>
+                    <img src="https://placehold.co/200x100" alt="Diagrama de asientos del bus">
+                </div>
+                <button class="reservar-button">Reservar viaje</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center text-white" class="container-fluid footer" style="background-color: black;">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 mt-2">
+                        <div class="row g-5" style="margin-top: 0.05px;">
+                            <div class="col-md-4 col-lg-4 col-xl-4" style="width: 438; padding-left: 0px;">
+                                <div class="footer-item d-flex flex-column">
+                                    <h4 class="mb-4 text-white">Ponte en contacto</h4>
+                                    <a href="https://acortar.link/A7R9TQ"> <i class="fas fa-home me-2 text-white"></i>
+                                        Neiva-Huila</a>
+                                    <a href="mailto:CodeByteTravel@gmail.com"><i class="fas fa-envelope me-2"></i>
+                                        CodeByteTravel@gmail.com</a>
+                                    <a href="tel:3028275037"><i class="fas fa-phone me-2"></i> 3028275037</a>
+                                    <!-- <a href="https://api.whatsapp.com/send?phone=3053550272"><i class="fas fa-phone me-2"></i> +57 305 355
+                    0272</a> -->
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-3" style="padding-right: 0%;">
+                                <div class="footer-item d-flex flex-column">
+                                    <h4 class="mb-4 text-white">Agencia</h4>
+                                    <a href="../LandigPages.html"> <i class="fas fa-angle-right me-2"></i> Inicio</a>
+                                    <a href="../Nosotros.html"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
+                                    <a href="../Viajes.html"><i class="fas fa-angle-right me-2"></i> Viajes</a>
+                                    <a href="../ofertas.html"><i class="fas fa-angle-right me-2"></i> Ofertas</a>
+                                </div>
+
+                                <br><br><br><br>
+                                <div class="col-md-6 col-lg-6 col-xl-3">
+                                    <div class="cardIcon" style="margin-bottom: 6%;">
+                                        <a href="https://www.instagram.com/webleb/" class="socialContainer containerOne"
+                                            target="_blank">
+                                            <i class="fa-brands fa-instagram socialIcon"></i>
+                                        </a>
+                                        <a href="https://discord.com/invite/SnM3Z8VJEA"
+                                            class="socialContainer containerTwo" target="_blank">
+                                            <i class="fa-brands fa-twitter socialIcon"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/profile.php?id=61565968176485"
+                                            class="socialContainer containerThree" target="_blank">
+                                            <i class="fa-brands fa-facebook socialIcon"></i>
+                                        </a>
+                                        <a href="https://api.whatsapp.com/send?phone=3053550272"
+                                            class="socialContainer containerFour" target="_blank">
+                                            <i class="fa-brands fa-whatsapp socialIcon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 col-xl-3" style="padding-left: 24px;">
+                                <div class="footer-item d-flex flex-column">
+                                    <h4 class=" text-white">Soporte</h4>
+                                    <a href="../Nosotros.html"><i class="fas fa-angle-right me-2"></i> contactanos</a>
+                                    <a href=""><i class="fas fa-angle-right me-2"></i> Terminos y Condiciones</a>
+                                    <a href=""><i class="fas fa-angle-right me-2"></i> Politicas de Privacidad</a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 col-xl-2">
+                                <div class="footer-item">
+                                    <div class="row gy-3 gx-2 mb-4">
+                                        <img src="../../../../asset/img/imgLogos/logoWhite.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="background-color: black;">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="../../../asset/Json/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+    <script src="../../../../asset/js/Client/Page.js"></script>
+</body>
+
+</html>

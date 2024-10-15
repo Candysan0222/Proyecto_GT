@@ -1,0 +1,523 @@
+body {
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Georgia', serif;
+}
+
+/*Navbar*/
+.navbar-light .navbar-nav .nav-link,
+.sticky-top.navbar-light,
+.-link:hover,
+.nav-link.active .navbar-brand img,
+.navbar .dropdown-toggle::after {
+    color: var(--bs-black);
+    transition: 0.5s;
+    border: none;
+    vertical-align: middle;
+    margin-left: 8px;
+    padding: 15px 15px;
+    position: sticky;
+    /* font-family: 'Abril Fatface', cursive; */
+    opacity: 1;
+}
+
+.navbar-light .navbar-nav .nav-link::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0%;
+    left: 0;
+    background: #D98000;
+    transition: 0.5s;
+    z-index: -4;
+    /* font-family: 'Abril Fatface', cursive; */
+}
+
+.navbar-light .navbar-nav .nav-link:hover::before,
+.navbar-light .navbar-nav {
+    height: calc(100%);
+    left: 1%;
+}
+
+@media (min-width: 992px) {
+    .navbar-light {
+        width: 100%;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.11);
+        height: 80px;
+    }
+    .col-lg-8.text-center.text-lg-start.mb-2.mb-lg-0 {
+        margin-block-start: 1%;
+    }
+}
+
+.welcome {
+    /* background-image: url(../img/imgLugares/Cavernatigre.jpg); */
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 100%;
+    filter: brightness(60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* font-family: 'Abril Fatface', cursive; */
+}
+
+.itemActivo {
+    background-color: #D98000;
+}
+
+.content {
+    padding: 5vh;
+    position: absolute;
+    left: -15vh;
+}
+
+.wel {
+    padding-top: 40vh;
+}
+
+/*termina navbar*/
+/*Footer*/
+
+.footer-item {
+    text-align: left;
+}
+
+a {
+    text-decoration: none !important;
+    color: white;
+}
+
+.cardIcon {
+    position: absolute;
+    bottom: -870px;
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0px;
+    border-radius: 15px;
+    gap: 10px;
+    /* margin-top: -45px; */
+    margin-top: -15vh;
+}
+
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background: #0F2027;
+    /* fallback for old browsers */
+    /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027);  */
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+    border-radius: 15px;
+}
+
+.containerOne:hover {
+    background-color: #D98000;
+    transition-duration: .3s;
+}
+
+.containerTwo:hover {
+    background-color: #D98000;
+    transition-duration: .3s;
+}
+
+.containerThree:hover {
+    background-color: #D98000;
+    transition-duration: .3s;
+}
+
+.containerFour:hover {
+    background-color: #D98000;
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialIcon {
+    color: white;
+}
+
+.socialContainer:hover .socialIcon {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Menu */
+
+.login-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    /* Oculto por defecto */
+    position: absolute;
+    background-color: white;
+    /* Fondo del menú */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra del menú */
+    border-radius: 20px;
+    z-index: 1000;
+    /* Asegúrate de que esté sobre otros elementos */
+}
+
+.login-dropdown:hover .dropdown-menu {
+    display: block;
+    /* Muestra el menú al pasar el cursor */
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    color: black;
+    /* Color del texto */
+    text-decoration: none;
+    /* Sin subrayado */
+    display: block;
+    /* Hace que el área de clic sea más grande */
+}
+
+.dropdown-item:hover {
+    background-color: #D98000;
+    /* Color de fondo al pasar el cursor */
+    color: white;
+    /* Color del texto al pasar el cursor */
+    text-align: center;
+}
+
+/* SubMenu */
+
+.sub-menu {
+    display: none;
+    /* Oculto por defecto */
+    position: absolute;
+    left: 50%;
+    /* Centrado horizontal */
+    transform: translateX(-150%);
+    /* Centrado horizontal */
+    background-color: white;
+    /* Fondo del submenú */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra del submenú */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    z-index: 1000;
+    /* Asegúrate de que esté sobre otros elementos */
+}
+
+.dropdown-item.active {
+    background-color: #D98000;
+    /* Color de fondo para la opción activa */
+    color: white;
+    /* Color del texto para la opción activa */
+}
+
+.title {
+    padding: 10px 15px;
+    color: black;
+    /* Color del texto */
+    text-decoration: none;
+    /* Sin subrayado */
+    display: block;
+    /* Hace que el área de clic sea más grande */
+    text-align: center;
+}
+
+.custom-modal {
+    background-color: #000D2C;
+    /* Cambia esto al color que prefieras */
+    color: #343a40;
+    /* Color del texto */
+    border-radius: 20px;
+    /* Borde redondeado */
+    overflow: hidden;
+    /* Asegura que los hijos no sobresalgan */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+}
+
+.custom-modal .modal-header {
+    background-color: #000D2C;
+    /* Cambia el color del encabezado */
+    color: white;
+    /* Color del texto del encabezado */
+    display: flex;
+    justify-content: space-between;
+    /* Asegura que el título y el botón se separen */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+.custom-modal .modal-footer {
+    background-color: #000D2C;
+    /* Cambia el color del pie del modal */
+}
+
+.custom-modal .btn-primary {
+    background-color: #D98000;
+    /* Cambia el color del botón */
+    border-color: #D98000;
+    /* Cambia el color del borde del botón */
+    color: black;
+    margin-left: 400px;
+    border-radius: 15px;
+}
+
+.custom-modal .btn-primary:hover {
+    background-color: #D98000;
+    /* Cambia el color del botón al pasar el ratón */
+}
+
+.custom-modal .btn-close {
+    background-color: transparent;
+    /* Cambia el fondo si lo deseas */
+    color: white;
+    /* Color del icono de cerrar */
+    border: none;
+    /* Quita el borde si es necesario */
+    margin-left: 0;
+    color: white;
+    /* Color del icono de cerrar */
+    border: none;
+    /* Quita el borde si es necesario */
+}
+
+.custom-modal .btn-close:hover {
+    color: #ff0000;
+    /* Cambia el color al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo al pasar el ratón */
+}
+
+.custom-modal .modal-title {
+    margin: 0;
+    /* Elimina márgenes para centrar el texto */
+    flex-grow: 1;
+    /* Permite que el título ocupe todo el espacio disponible */
+    text-align: center;
+    /* Centra el texto */
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    width: 350px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0px 15px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+
+.input-field {
+    position: relative;
+    margin: 20px 0;
+    /* Espaciado para los campos */
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    /* Color inicial del borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    background-color: #000D2C;
+    /* Fondo del campo de entrada */
+    color: #FFF;
+    /* Color del texto */
+    font-size: 19px;
+    /* Tamaño de fuente */
+    transition: border-color 0.3s;
+    /* Transición para el borde */
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #FFF;
+    font-size: 19px;
+    pointer-events: none;
+    /* Para que no interfiera con el clic en el input */
+    transition: 0.3s;
+    /* Transición para la etiqueta */
+}
+
+input:focus {
+    border: 2px solid #1CD6CE;
+    /* Cambia el color del borde al enfocar */
+}
+
+input:focus+label,
+input:valid+label {
+    top: 0;
+    /* Mueve la etiqueta hacia arriba */
+    font-size: 16px;
+    /* Cambia el tamaño de fuente de la etiqueta */
+    padding: 0 15px;
+    /* Añade un padding para el fondo */
+    background: #000D2C;
+    /* Fondo para la etiqueta cuando está en foco o válida */
+}
+
+.inputBox {
+    position: relative;
+    width: 466px;
+}
+
+.inputBox input {
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 19px;
+    border-radius: 6px;
+
+    height: 64px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 20px;
+    padding: 20px 0;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.5s;
+    /* text-transform: uppercase; */
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1em;
+}
+
+.inputBox input:focus {
+    border: 2px solid #1CD6CE;
+    /* Cambia el color del borde al enfocar */
+}
+
+.inputBox input:focus+span,
+.inputBox input:valid+span {
+    color: white;
+    /* Color de la etiqueta al enfocar */
+    font-size: 0.75em;
+    /* Tamaño de la etiqueta al enfocar */
+    transform: translateX(0) translateY(-7px);
+    /* Mueve la etiqueta hacia arriba */
+    padding: 0 5px;
+    /* Añade un padding para el fondo */
+    background: #000D2C;
+    /* Fondo para la etiqueta */
+    border-radius: 2px;
+    /* Bordes redondeados para el fondo de la etiqueta */
+}
+
+/* Toggle para mostrar/ocultar contraseña */
+#toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    /* Posiciona el toggle a la derecha */
+    background: url(../../img/imgLogos/cerrar-ojo.png);
+    background-size: cover;
+    /* Ajusta la imagen */
+    width: 30px;
+    /* Ancho del toggle */
+    height: 30px;
+    /* Alto del toggle */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+}
+
+#toggle.hide {
+    background: url(../../img/imgLogos/foto.png);
+    background-size: cover;
+    /* Ajusta la imagen para el estado oculto */
+}
+
+.reservar-viaje-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.reservar-viaje-modal .modal-content {
+    background-color: #c69c6d;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 542px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.reservar-viaje-modal .modal-content select {
+    margin: 5px;
+}
+
+.reservar-viaje-modal .modal-content img {
+    width: 100px;
+    height: auto;
+}
+
+.reservar-viaje-modal .modal-content .reservar-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reservar-viaje-modal .modal-content .reservar-button:hover {
+    background-color: #357ab7;
+}
+
+.reservar-button {
+    width: 190px;
+    margin-top: 10px;
+    margin-left: 32%;
+}

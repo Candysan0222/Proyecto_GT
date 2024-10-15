@@ -1,0 +1,47 @@
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1500px;
+    }
+}
+
+.mt-5 {
+    margin-top: 1.5rem !important;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 3000px !important;
+    }
+}
+
+.btn-eliminar {
+    background-color: #e45e5e;
+}
+
+.btn-editar {
+    background-color: #478bcf;
+}
+
+.btn-info{
+    background-color: #c7f7ff;
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    padding: var(--bs-modal-header-padding);
+    border-bottom: var(--bs-modal-header-border-width) solid var(--bs-modal-header-border-color);
+    border-top-left-radius: var(--bs-modal-inner-border-radius);
+    border-top-right-radius: var(--bs-modal-inner-border-radius);
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+}

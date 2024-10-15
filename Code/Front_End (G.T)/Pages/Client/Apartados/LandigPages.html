@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Travel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- <meta name="google-signin-client_id"
+    content="384725443240-vse57qkt738vvmbouajmjfu5vccaf8h8.apps.googleusercontent.com"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <link rel="stylesheet" href="../../../asset/Json/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../asset/css/Client/styles.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light px-3 px-lg-5 py-lg-0" style="position: sticky; top: 0;">
+    <a href="../Apartados/LandigPages.html" class="navbar-brand">
+      <img src="../../../asset/img/imgLogos/imagologoblack.png" width="200px" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" style="opacity: 1;" id="navbarCollapse">
+      <div class="navbar-nav ms-auto">
+        <a href="LandigPages.html" class="nav-item nav-link itemActivo">Inicio</a>
+        <a href="Nosotros.html" class="nav-item nav-link">Nosotros</a>
+        <a href="Viajes.html" class="nav-item nav-link">Viajes</a>
+        <a href="ofertas.html" class="nav-item nav-link">Ofertas</a>
+
+        <div class="nav-item nav-link login-dropdown">
+          <img src="../../../asset/img/imgLogos/imgLogin.png" alt="Iniciar Sesión" style="width: 40px; height: 40px;">
+          <div class="dropdown-menu" style="right: 5%; padding-bottom: 25%;">
+
+            <!-- //  Menu Principal  \\ -->
+
+            <a><img src="../../../asset/img/imgLogos/usuario (1).png"
+                style="padding-left: 35%; padding-bottom: 5%; padding-top: 5%;"></a>
+            <a href="#" class="dropdown-item" id="Iniciar" onclick="toggleSubMenu('Iniciar')">Iniciar sesión</a>
+            <a href="#" class="dropdown-item" id="Registrar" onclick="toggleSubMenu('Registrar')">Registrar usuario</a>
+          </div>
+
+          <!-- //  Inisiar Sesión \\ -->
+
+          <div class="sub-menu" id="subIniciar" style="display: none; top: 180px; height: 280%; border-radius: 15px;">
+            <a class="title">Iniciar sesión</a>
+            <!-- <div class="g-signin2" data-onsuccess="onSignIn">Acceder con Google</div> -->
+            <a class="dropdown-item" href="#" onclick="signInWithGoogle()">
+              <img src="../../../asset/img/imgLogos/buscar (1).png" style="margin-right: 3%;">Acceder con Google
+            </a>
+            <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+            <a class="dropdown-item" href="#"><img src="../../../asset/img/imgLogos/facebook (1).png"
+                style="margin-right: 3%;" onclick="loginWithFacebook()">Acceder con Facebook</a>
+            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><img
+                src="../../../asset/img/imgLogos/correo.png" style="margin-right: 3%;">Acceder con tu Gmail</a>
+          </div>
+
+          <!-- //  Registrar Usuario \\ -->
+
+          <div class="sub-menu" id="subRegistrar" style="display: none; top: 220px; height: 280%; border-radius: 15px;">
+            <a class="title">Registrar usuario</a>
+            <a class="dropdown-item" href="#"><img src="../../../asset/img/imgLogos/buscar (1).png"
+                style="margin-right: 3%;" onclick="signInWithGoogle()">Registrar con Google</a>
+            <a class="dropdown-item" href="#"><img src="../../../asset/img/imgLogos/facebook (1).png"
+                style="margin-right: 3%;" onclick="loginWithFacebook()">Registrar con Facebook</a>
+            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal"><img
+                src="../../../asset/img/imgLogos/correo.png" style="margin-right: 3%;">Registrar con tu Gmail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal Iniciar Sesión -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <div class="modal-header justify-content-between">
+                <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="../../../asset/img/imgLogos/usuario (1).png" alt="Icono de usuario" style="width: 20%; margin-bottom: 5%;">
+                <label style="color: white;">¿Cuál es tu Gmail?</label>
+
+                <div class="mb-3 w-100">
+                    <div class="input-field">
+                        <input type="text" required spellcheck="false" id="inisiousernameinput" autocomplete="username">
+                        <label>tu-Gmail@gmail.com <img src="../../../asset/img/imgLogos/Img-Figma/correo-electronico.png" style="width: 30px;"></label>
+                    </div>
+                </div>
+
+                <div class="inputBox mb-3 w-100">
+                    <input type="password" required id="inisiopasswordinput">
+                    <span>Ingresa tu contraseña</span>
+                    <div id="toggle" onclick="showHidePassword()" style="cursor: pointer;"></div>
+                </div>
+                
+                <div class="mb-3 w-100" style="padding-left: 18%;">
+                    <div class="g-recaptcha" data-sitekey="6LdYJFUqAAAAAFcCzwv7FJ4V8uuzYEbLJEhnRFYF"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="login()">Continuar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Modal Registrar Usuario -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content custom-modal">
+        <div class="modal-header justify-content-between">
+          <h5 class="modal-title" id="registerModalLabel">Registrar usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="registrationForm" onsubmit="validateAndSignIn(); return false;">
+          <div class="modal-body d-flex flex-column align-items-center">
+            <div class="mb-3 w-100">
+              <div class="input-field">
+                <input type="text" required spellcheck="false" id="registerInput" autocomplete="username">
+                <label>tu-Gmail@gmail.com <img src="../../../asset/img/imgLogos/Img-Figma/correo-electronico.png"
+                    style="width: 30px;"></label>
+              </div>
+            </div>
+            <div class="inputBox mb-3 w-100">
+              <input type="password" required id="registerPasswordInput" autocomplete="new-password">
+              <span>Ingresa tu contraseña</span>
+              <div id="toggleRegisterPassword" class="eye-icon" onclick="showHideRegisterPassword()"></div>
+            </div>
+            <div class="inputBox mb-3 w-100">
+              <input type="password" required id="confirmPasswordInput" autocomplete="new-password">
+              <span>Confirma tu contraseña</span>
+              <div id="toggleConfirmPassword" class="eye-icon" onclick="showHideConfirmPassword()"></div>
+            </div>
+            <div class="mb-3 w-100" style="padding-left: 18%;">
+              <div class="g-recaptcha" data-sitekey="6LdYJFUqAAAAAFcCzwv7FJ4V8uuzYEbLJEhnRFYF"></div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="submit" class="btn btn-primary" onclick="validateAndSignIn()">Continuar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de Nosotros -->
+  <section class="container-fluid" style="padding: 0;">
+    <!-- <div class="overlay">
+    </div> -->
+    <div class="welcome ">
+      <!-- <img src="../ASSET/img/imgLugares/puente.jpg" class="imgNosotros darkened-image-filter">  -->
+      <h2 class="text-center text-white wel">Bienvenidos a GOLDEN TRAVEL</h2>
+      <p class="text-center text-white p1">A nuestra pagina web oficial de viajes turisticos por el huila y sus
+        alrededores<br>Le tenemos grandiosas ofertas y viajes que le pueden interesar</p>
+    </div>
+  </section>
+
+
+  <!-- Cards -->
+  <section class="container">
+    <div class="card-grid">
+      <a class="card" href="../Apartados/Viajes.html">
+        <div class="background" style="background-image: url(../../../asset/img/imgLugares/catedraZipaquira.jpg)">
+        </div>
+        <div class="content">
+          <p class="category">Descubre más</p>
+          <h3 class="heading">Viajes</h3>
+        </div>
+      </a>
+      <a class="card" href="../Apartados/ofertas.html">
+        <div class="background" style="background-image: url(../../../asset/img/imgLugares/cuevadeltigre.jpg)">
+        </div>
+        <div class="content">
+          <p class="category">DEscubre más</p>
+          <h3 class="heading">Ofertas</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center text-white" class="container-fluid footer" style="background-color: black;">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 mt-2">
+            <div class="row g-5" style="margin-top: 0.05px;">
+              <div class="col-md-4 col-lg-4 col-xl-4" style="width: 438; padding-left: 0px;">
+                <div class="footer-item d-flex flex-column">
+                  <h4 class="mb-4 text-white">Ponte en contacto</h4>
+                  <a href="https://acortar.link/A7R9TQ"> <i class="fas fa-home me-2 text-white"></i> Neiva-Huila</a>
+                  <a href="mailto:CodeByteTravel@gmail.com"><i class="fas fa-envelope me-2"></i>
+                    CodeByteTravel@gmail.com</a>
+                  <a href="tel:3028275037"><i class="fas fa-phone me-2"></i> 3028275037</a>
+                  <!-- <a href="https://api.whatsapp.com/send?phone=3053550272"><i class="fas fa-phone me-2"></i> +57 305 355
+                    0272</a> -->
+                  <br>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-3" style="padding-right: 0%;">
+                <div class="footer-item d-flex flex-column">
+                  <h4 class="mb-4 text-white">Agencia</h4>
+                  <a href="LandigPages.html"> <i class="fas fa-angle-right me-2"></i> Inicio</a>
+                  <a href="Nosotros.html"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
+                  <a href="Viajes.html"><i class="fas fa-angle-right me-2"></i> Viajes</a>
+                  <a href="ofertas.html"><i class="fas fa-angle-right me-2"></i> Ofertas</a>
+                </div>
+
+                <br>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                  <div class="cardIcon">
+                    <a href="https://www.instagram.com/webleb/" class="socialContainer containerOne" target="_blank">
+                      <i class="fa-brands fa-instagram socialIcon"></i>
+                    </a>
+                    <a href="https://discord.com/invite/SnM3Z8VJEA" class="socialContainer containerTwo"
+                      target="_blank">
+                      <i class="fa-brands fa-twitter socialIcon"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61565968176485"
+                      class="socialContainer containerThree" target="_blank">
+                      <i class="fa-brands fa-facebook socialIcon"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=3053550272" class="socialContainer containerFour"
+                      target="_blank">
+                      <i class="fa-brands fa-whatsapp socialIcon"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-6 col-xl-3" style="padding-left: 24px;">
+                <div class="footer-item d-flex flex-column">
+                  <h4 class=" text-white">Soporte</h4>
+                  <a href="Nosotros.html"><i class="fas fa-angle-right me-2"></i> contactanos</a>
+                  <a href=""><i class="fas fa-angle-right me-2"></i> Terminos y Condiciones</a>
+                  <a href=""><i class="fas fa-angle-right me-2"></i> Politicas de Privacidad</a>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-6 col-xl-2">
+                <div class="footer-item">
+                  <div class="row gy-3 gx-2 mb-4">
+                    <img src="../../../asset/img/imgLogos/logoWhite.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center" style="background-color: black;">
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="../../../asset/Json/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="../../../asset/js/Client/Page.js"></script>
+</body>
+
+</html>

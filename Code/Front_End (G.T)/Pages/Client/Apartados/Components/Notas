@@ -1,0 +1,75 @@
+tengo un diseño del contenido de un viaje que es este:<section class="container-fluid"
+    style="padding: 0; display: flex;">
+    <div class="image-gallery"
+        style="flex: 1; display: flex; flex-direction: column; align-items: center; padding: 5%;">
+
+        <!-- Imagen grande -->
+        <img src="../../ASSET/img/imgLugares/Cavernatigre.jpg" alt="Caverna del Tigre"
+            style="width: 100%; height: auto; cursor: pointer;" onclick="openModal(0)" />
+
+        <div class="small-images"
+            style="display: flex; justify-content: space-between; width: 100%; padding-top: 10px;">
+            <img src="../../ASSET/img/imgLugares/cuevadeltigre.jpg" alt="Imagen pequeña 1"
+                style="width: 30%; height: auto; cursor: pointer;" onclick="openModal(1)" />
+            <img src="../../ASSET/img/imgLugares/cuevadeltigre.jpg" alt="Imagen pequeña 2"
+                style="width: 30%; height: auto; cursor: pointer;" onclick="openModal(2)" />
+            <img src="../../ASSET/img/imgLugares/cuevadeltigre.jpg" alt="Imagen pequeña 3"
+                style="width: 30%; height: auto; cursor: pointer;" onclick="openModal(3)" />
+        </div>
+    </div>
+
+    <div class="welcome" style="flex: 2; padding: 5%;">
+        <h2 class="text-center text-white wel" style="padding-top: 5%; padding-bottom: 5%; font-size: 50px;">
+            Caverna del Tigre
+        </h2>
+        <p class="text-center text-white" style="padding: 2%; margin-left: 10%; margin-right: 10%; font-size: 30px;">
+            Descubre la mágica Cueva de los Guácharos, un destino turístico imperdible en el corazón del Huila,
+            Colombia. Ubicada cerca del encantador municipio de Llaguara, esta cueva ofrece una experiencia única de
+            aventura y conexión con la naturaleza.
+        </p>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="imageModal"
+    style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.8);">
+    <span onclick="closeModal()"
+        style="color: white; font-size: 40px; cursor: pointer; position: absolute; top: 20px; right: 30px;">&times;</span>
+    <img id="modalImage" style="display: block; margin: auto; max-width: 90%; max-height: 90%; padding-top: 60px;" />
+    <button id="prevBtn" onclick="changeImage(-1)"
+        style="position: absolute; top: 50%; left: 30px; color: white; background: none; border: none; font-size: 40px; cursor: pointer;">&#10094;</button>
+    <button id="nextBtn" onclick="changeImage(1)"
+        style="position: absolute; top: 50%; right: 30px; color: white; background: none; border: none; font-size: 40px; cursor: pointer;">&#10095;</button>
+</div>
+
+<h2 class="text-center" style="padding: 2%; margin-left: 10%; margin-right: 10%;">
+    Informacion del viaje a la cueva de los Guácharos
+</h2>
+<div class="row">
+    <div class="col-md-6 text-end" style=" text-align: left !important;"> <!-- Alinea a la derecha -->
+        <p style="padding: 2%; margin-right: 10%; margin-left: 10%; width: 50%;">
+            El viaje partirá desde el terminal de Neiva. Tomaremos la vía norte,
+            utilizando la vía cincunvalar para salir por el Puente del Triunfo hacia Palermo.
+            <br>
+            Después de llegar al cruce (ronvoy), nos desviaremos por el camino a Llaguara.
+            Luego, tras recorrer aproximadamente 10 kilómetros,
+            ingresaremos por una trocha hacia la Cueva de los Guácharos.
+            <br>
+            Una vez en la cueva, se ofrecerá una merienda, y después nos dirigiremos a explorar sus maravillosos
+            alrededores.
+        </p>
+    </div>
+    <div class="col-md-6 text-start" style="padding-left: 10%;"> <!-- Alinea a la izquierda -->
+        <h2>Fecha del Viaje:</h2>
+        <p>29/10/2024</p>
+    </div>
+</div>
+<div class="text-center mt-4" style="margin-bottom: 24px;">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservarViajeModal">Reservar Viaje</button>
+</div>
+
+
+le comento es que en mi paguina principal que tiene alrededor de 15 viajes, cada una me manda a una url que es
+informacion.html, lo que quiero es que donde estan las imagenes, en el h2, donde trae el nombre de la cueva de l tigre,
+la desccripcion que es el parrafo y toda la informacion en este html que le pase me lo consulte al backen y me lo ponga
+donde esta eso

@@ -1,0 +1,921 @@
+body {
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family: 'Georgia', serif;
+}
+
+
+/*Navbar*/
+.navbar-light .navbar-nav .nav-link,
+.sticky-top.navbar-light,
+.-link:hover,
+.nav-link.active .navbar-brand img,
+.navbar .dropdown-toggle::after {
+  color: var(--bs-black);
+  transition: 0.5s;
+  border: none;
+  vertical-align: middle;
+  margin-left: 8px;
+  padding: 15px 15px;
+  position: sticky;
+  /* font-family: 'Abril Fatface', cursive; */
+  opacity: 1;
+}
+
+.navbar-light .navbar-nav .nav-link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0%;
+  left: 0;
+  background: #D98000;
+  transition: 0.5s;
+  z-index: -4;
+  /* font-family: 'Abril Fatface', cursive; */
+}
+
+.navbar-light .navbar-nav .nav-link:hover::before,
+.navbar-light .navbar-nav {
+  height: calc(100%);
+  left: 1%;
+}
+
+.navbar-light .navbar-nav .nav-link.nav-contact::before {
+  display: none;
+}
+
+.navbar {
+  background-color: transparent;
+  /* Fondo transparente */
+  box-shadow: none;
+  /* Sin sombra, si es necesario */
+}
+
+.navbar-nav .nav-link {
+  color: black;
+  /* Color de texto */
+  border-radius: 5px;
+  /* Bordes redondeados si lo deseas */
+  transition: background-color 0.3s;
+  /* Transición suave */
+}
+
+@media (min-width: 992px) {
+  .navbar-light {
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.11);
+    height: 80px;
+  }
+  .col-lg-8.text-center.text-lg-start.mb-2.mb-lg-0 {
+    margin-block-start: 1%;
+  }
+}
+
+.welcome {
+  background-image: url(../../img/imgLugares/puente.jpg);
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 100%;
+  filter: brightness(60%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* font-family: 'Abril Fatface', cursive; */
+}
+
+.itemActivo {
+  background-color: #D98000;
+}
+
+.content {
+  padding: 5vh;
+  position: absolute;
+  left: -15vh;
+}
+
+.wel {
+  padding-top: 40vh;
+}
+
+/*termina navbar*/
+/*estilos, centro del landing page, cards*/
+
+#credits {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: black;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  align-items: flex-start;
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  padding: 64px 24px;
+}
+
+.card-grid {
+  display: grid;
+  grid-column-gap: 50vh;
+  max-width: 800px;
+  width: 100%;
+}
+
+@media(min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media(min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Cambia aquí a 2 columnas */
+  }
+}
+
+.card:before {
+  content: '';
+  display: block;
+  /* padding-bottom: 150%; */
+  width: 100%;
+  height: 50vh;
+  border-radius: 24px;
+}
+
+.background {
+  background-position: center;
+  background-size: cover;
+  border-radius: 24px;
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: -20vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: filter 200ms linear, transform 200ms linear;
+  height: 50vh;
+  width: 500px;
+}
+
+.card:hover .background {
+  transform: scale(1.05);
+  filter: none;
+}
+
+.card-grid:hover>.card:not(:hover) .background {
+  filter: brightness(0.6) saturate(1) contrast(1.2) blur(5px);
+}
+
+.card-grid:hover>.card:not(:hover) .content {
+  filter: brightness(0.8) blur(2px);
+}
+
+.category {
+  color: #e1e1e1;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.heading {
+  color: #e1e1e1;
+  font-size: 1.8rem;
+}
+
+/*****************Viajes***************/
+.containerViajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  /* Espacio entre las cards */
+  padding: 20px;
+}
+
+.cardViajes {
+  position: relative;
+  width: 320px;
+  /* Tamaño aumentado */
+  height: 220px;
+  /* Tamaño aumentado */
+  margin: 20px;
+  /* Espacio alrededor de las cards */
+  overflow: hidden;
+  border-radius: 10px;
+  /* Borde más redondeado */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra más pronunciada */
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardViajes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-contentViajes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* Fondo oscuro para el texto */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-contentViajes h3 {
+  margin-top: 0;
+}
+
+.card-contentViajes p {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.cardViajes:hover {
+  transform: scale(1.05);
+  /* Agranda la card al pasar el mouse */
+}
+
+.cardViajes:hover .card-contentViajes {
+  opacity: 1;
+}
+
+/*Footer*/
+
+.footer-item {
+  text-align: left;
+}
+
+a {
+  text-decoration: none !important;
+  color: white;
+}
+
+.cardIcon {
+  /* position: absolute;
+  bottom: -870px;
+  left: 50%; */
+  /* Centra horizontalmente */
+  transform: translateX(50%);
+  /*display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;*/
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  border-radius: 15px;
+  /* gap: 10px; */
+  /* margin-top: -45px; */
+  /* margin-top: -15vh; */
+  /* top: 1350px; */
+}
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background: #0F2027;
+  /* fallback for old browsers */
+  /* background: linear-gradient(to right, #2C5364, #203A43, #0F2027);  */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+  border-radius: 15px;
+}
+
+.containerOne:hover {
+  background-color: #D98000;
+  transition-duration: .3s;
+}
+
+.containerTwo:hover {
+  background-color: #D98000;
+  transition-duration: .3s;
+}
+
+.containerThree:hover {
+  background-color: #D98000;
+  transition-duration: .3s;
+}
+
+.containerFour:hover {
+  background-color: #D98000;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialIcon {
+  color: white;
+}
+
+.socialContainer:hover .socialIcon {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/********** Ofertas **********/
+.content {
+  position: relative;
+  z-index: 3;
+  /* Asegura que el contenido esté por encima del overlay */
+}
+
+.itemActivo {
+  background-color: #D98000;
+}
+
+.content {
+  padding: 5vh;
+  position: absolute;
+  left: -15vh;
+}
+
+.card_ofertas {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  height: 100%;
+}
+
+.card img_ofertas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #D98000;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Tamaños fijos para las cartas */
+.large-card_ofertas {
+  width: 600px;
+  height: 350px;
+}
+
+.small-card_ofertas {
+  width: 300px;
+  height: 175px;
+}
+
+.card-container_ofertas {
+  display: flex;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.container_ofertas {
+  display: grid;
+  place-items: center;
+}
+
+/*****LOADER*****************/
+.loader {
+  display: none;
+  /* Oculto por defecto */
+  position: fixed;
+  /* Fijo para cubrir toda la pantalla */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(255, 255, 255);
+  /* Fondo blanco semi-transparente */
+  z-index: 9999;
+  /* Asegura que esté por encima de otros elementos */
+  align-items: center;
+  justify-content: center;
+}
+
+.loader span {
+  display: block;
+  background: #ee9b00;
+}
+
+.loader .hour,
+.loader .min {
+  width: 6px;
+  height: 22px;
+  border-radius: 50px;
+  position: absolute;
+  top: 24.5px;
+  left: 21px;
+  animation: load9243 1.2s linear infinite;
+  transform-origin: top center;
+}
+
+.loader .min {
+  height: 17px;
+  animation: load9243 4s linear infinite;
+}
+
+.loader .circel {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  position: absolute;
+  top: 19px;
+  left: 19px;
+}
+
+@keyframes load9243 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Menu */
+.login-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  /* Oculto por defecto */
+  position: absolute;
+  background-color: white;
+  /* Fondo del menú */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra del menú */
+  border-radius: 20px;
+  z-index: 1000;
+  /* Asegúrate de que esté sobre otros elementos */
+}
+
+.login-dropdown:hover .dropdown-menu {
+  display: block;
+  /* Muestra el menú al pasar el cursor */
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  color: black;
+  /* Color del texto */
+  text-decoration: none;
+  /* Sin subrayado */
+  display: block;
+  /* Hace que el área de clic sea más grande */
+}
+
+.dropdown-item:hover {
+  background-color: #D98000;
+  /* Color de fondo al pasar el cursor */
+  color: white;
+  /* Color del texto al pasar el cursor */
+  text-align: center;
+}
+
+/* SubMenu */
+.sub-menu {
+  display: none;
+  /* Oculto por defecto */
+  position: absolute;
+  left: 50%;
+  /* Centrado horizontal */
+  transform: translateX(-150%);
+  /* Centrado horizontal */
+  background-color: white;
+  /* Fondo del submenú */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra del submenú */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  z-index: 1000;
+  /* Asegúrate de que esté sobre otros elementos */
+}
+
+.dropdown-item.active {
+  background-color: #D98000;
+  /* Color de fondo para la opción activa */
+  color: white;
+  /* Color del texto para la opción activa */
+}
+
+.title {
+  padding: 10px 15px;
+  color: black;
+  /* Color del texto */
+  text-decoration: none;
+  /* Sin subrayado */
+  display: block;
+  /* Hace que el área de clic sea más grande */
+  text-align: center;
+}
+
+.custom-modal {
+  background-color: #000D2C;
+  /* Cambia esto al color que prefieras */
+  color: #343a40;
+  /* Color del texto */
+  border-radius: 20px;
+  /* Borde redondeado */
+  overflow: hidden;
+  /* Asegura que los hijos no sobresalgan */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  /* Sombra */
+}
+
+.custom-modal .modal-header {
+  background-color: #000D2C;
+  /* Cambia el color del encabezado */
+  color: white;
+  /* Color del texto del encabezado */
+  display: flex;
+  justify-content: space-between;
+  /* Asegura que el título y el botón se separen */
+  align-items: center;
+  /* Centra verticalmente */
+}
+
+.custom-modal .modal-footer {
+  background-color: #000D2C;
+  /* Cambia el color del pie del modal */
+}
+
+.custom-modal .btn-primary {
+  background-color: #D98000;
+  /* Cambia el color del botón */
+  border-color: #D98000;
+  /* Cambia el color del borde del botón */
+  color: black;
+  margin-left: 400px;
+  border-radius: 15px;
+}
+
+.custom-modal .btn-primary:hover {
+  background-color: #D98000;
+  /* Cambia el color del botón al pasar el ratón */
+}
+
+.custom-modal .btn-close {
+  background-color: transparent;
+  /* Cambia el fondo si lo deseas */
+  color: white;
+  /* Color del icono de cerrar */
+  border: none;
+  /* Quita el borde si es necesario */
+  margin-left: 0;
+  color: white;
+  /* Color del icono de cerrar */
+  border: none;
+  /* Quita el borde si es necesario */
+}
+
+.custom-modal .btn-close:hover {
+  color: #ff0000;
+  /* Cambia el color al pasar el ratón */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Fondo al pasar el ratón */
+}
+
+.custom-modal .modal-title {
+  margin: 0;
+  /* Elimina márgenes para centrar el texto */
+  flex-grow: 1;
+  /* Permite que el título ocupe todo el espacio disponible */
+  text-align: center;
+  /* Centra el texto */
+}
+
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  width: 350px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0px 15px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.input-field {
+  position: relative;
+  margin: 20px 0;
+  /* Espaciado para los campos */
+}
+
+.input-field input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  /* Color inicial del borde */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  background-color: #000D2C;
+  /* Fondo del campo de entrada */
+  color: #FFF;
+  /* Color del texto */
+  font-size: 19px;
+  /* Tamaño de fuente */
+  transition: border-color 0.3s;
+  /* Transición para el borde */
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #FFF;
+  font-size: 19px;
+  pointer-events: none;
+  /* Para que no interfiera con el clic en el input */
+  transition: 0.3s;
+  /* Transición para la etiqueta */
+}
+
+input:focus {
+  border: 2px solid #1CD6CE;
+  /* Cambia el color del borde al enfocar */
+}
+
+input:focus+label,
+input:valid+label {
+  top: 0;
+  /* Mueve la etiqueta hacia arriba */
+  font-size: 16px;
+  /* Cambia el tamaño de fuente de la etiqueta */
+  padding: 0 15px;
+  /* Añade un padding para el fondo */
+  background: #000D2C;
+  /* Fondo para la etiqueta cuando está en foco o válida */
+}
+
+.inputBox {
+  position: relative;
+  width: 466px;
+}
+
+.inputBox input {
+  width: 100%;
+  /* Ocupa todo el ancho del contenedor */
+  padding: 10px 15px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  font-size: 19px;
+  border-radius: 6px;
+
+  height: 64px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 20px;
+  padding: 20px 0;
+  pointer-events: none;
+  font-size: 1em;
+  transition: 0.5s;
+  /* text-transform: uppercase; */
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.1em;
+}
+
+.inputBox input:focus {
+  border: 2px solid #1CD6CE;
+  /* Cambia el color del borde al enfocar */
+}
+
+.inputBox input:focus+span,
+.inputBox input:valid+span {
+  color: white;
+  /* Color de la etiqueta al enfocar */
+  font-size: 0.75em;
+  /* Tamaño de la etiqueta al enfocar */
+  transform: translateX(0) translateY(-7px);
+  /* Mueve la etiqueta hacia arriba */
+  padding: 0 5px;
+  /* Añade un padding para el fondo */
+  background: #000D2C;
+  /* Fondo para la etiqueta */
+  border-radius: 2px;
+  /* Bordes redondeados para el fondo de la etiqueta */
+}
+
+/* Toggle para mostrar/ocultar contraseña */
+#toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  /* Posiciona el toggle a la derecha */
+  background: url(../../img/imgLogos/cerrar-ojo.png);
+  background-size: cover;
+  /* Ajusta la imagen */
+  width: 30px;
+  /* Ancho del toggle */
+  height: 30px;
+  /* Alto del toggle */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+}
+
+#toggle.hide {
+  background: url(../../img/imgLogos/foto.png);
+  background-size: cover;
+  /* Ajusta la imagen para el estado oculto */
+}
+
+/*  Ofertas */
+body {
+  background-color: #11111100;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container_ofertas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los frames */
+}
+
+.frame {
+  position: relative;
+  transition: transform 0.3s; /* Efecto de transformación */
+  width: 65%;
+  height: 20vw; /* Ajustable en base a la anchura */
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+:root {
+  --background-size: 400px;
+  --element-count: 9;
+  --translate-dist: 100px;
+  --translate-dist-rev: calc(var(--translate-dist) * -1);
+  --transition: 0.5s ease-in-out; /* Animación más rápida */
+}
+
+.slice {
+  background-color: #D98000;
+  background-size: var(--background-size) var(--background-size);
+  background-position: calc(var(--background-size) / var(--element-count) * var(--slice-index) * -1) center;
+  opacity: 0;
+  transition: var(--transition) calc(100ms * var(--slice-index)); /* Animación más rápida */
+}
+
+.slice:nth-child(odd) {
+  transform: translateY(var(--translate-dist-rev));
+}
+
+.slice:nth-child(even) {
+  transform: translateY(var(--translate-dist));
+}
+
+.frame:hover .slice {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text {
+  position: absolute;
+  inset: 0;
+  /* margin: auto; */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.text h2 {
+  opacity: 0; /* Inicialmente oculto */
+  transition: var(--transition);
+  font-size: 24px; /* Cambia el tamaño según necesites */
+  text-align: center;
+}
+
+.frame:hover .text h2 {
+  opacity: 1; /* Mostrar descripción al hacer hover */
+  transform: translateY(0); /* Asegúrate de que no se desplace */
+}
+
+/* Estilo para las tarjetas pequeñas */
+.small-cards-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; /* Espacio entre la tarjeta grande y las pequeñas */
+}
+
+.frame.small {
+  width: 300px; /* Ajusta según necesites */
+  height: 188px; /* Ajusta según necesites */
+  margin-bottom: 10px; /* Espacio entre las imágenes pequeñas */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 1024px) {
+  .frame {
+      width: 80%; /* Más ancho en tabletas */
+      height: 30vw; /* Mayor altura */
+  }
+
+  .frame.small {
+      width: 150px; /* Reducir tamaño de pequeñas */
+      height: 120px;
+  }
+
+  .small-cards-container {
+      margin-left: 10px; /* Reducir margen en tabletas */
+  }
+}
+
+@media (max-width: 768px) {
+  .frame {
+      width: 100%; /* Full width en móviles */
+      height: 40vw; /* Ajustar altura */
+  }
+
+  .small-cards-container {
+      flex-direction: row; /* Mostrar en fila en móviles */
+      justify-content: center;
+      margin-top: 10px; /* Espacio arriba */
+  }
+
+  .frame.small {
+      width: 45%; /* Ajustar tamaño de las pequeñas */
+      height: auto; /* Mantener proporción */
+      margin: 0 5px; /* Espaciado entre pequeñas */
+  }
+}
+
+.eye-icon {
+  width: 30px;
+  height: 30px;
+  background: url('../../../asset/img/imgLogos/cerrar-ojo.png') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  position: absolute;
+  right: 15px; /* Ajusta según sea necesario */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.eye-icon:hover {
+  transform: scale(1.2); /* Efecto de escalado al pasar el ratón */
+}
+
+.eye-icon.active {
+  background: url('../../../asset/img/imgLogos/foto.png') no-repeat center center; /* Cambia la imagen cuando se muestra la contraseña */
+}
