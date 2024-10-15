@@ -1,0 +1,55 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.bg {
+    background-image: url('../img/imgLugares/Salto\ tigre.jpg'); 
+    height: 100vh;  /* Ocupa toda la altura de la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-reset-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con ligera transparencia */
+    padding: 30px; /* Más espacio alrededor del contenido */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra pronunciada para que el cuadro resalte */
+    max-width: 500px; /* Ancho máximo del contenedor */
+    width: 100%; /* Se ajusta al 100% del ancho disponible hasta el máximo */
+    margin: 20px;
+}
+
+.password-reset-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.password-reset-header img {
+    max-width: 100px; 
+    margin-right: 10px;
+}
+
+.password-reset-header h2 {
+    font-family: 'Abril Fatface', cursive;
+    color: #333; /* Color oscuro para mejor contraste con el fondo blanco */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-block {
+    width: 100%;
+    font-size: 1.1em; /* Botón ligeramente más grande para mejor visibilidad */
+}
+
+.text-center p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
