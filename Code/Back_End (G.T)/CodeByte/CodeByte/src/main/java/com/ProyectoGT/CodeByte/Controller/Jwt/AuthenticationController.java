@@ -13,9 +13,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/jwt/auth")
-@CrossOrigin(origins = "http://127.0.0.1:5500") // Permite CORS solo para este origen
 public class AuthenticationController {
 
     @Autowired

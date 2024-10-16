@@ -31,7 +31,7 @@ public class SecurityConfig {
                                 "/Seguridad/Roles/",
                                 "/Seguridad/Personas/",
                                 "/Seguridad/Usuarios/GuardarUsuarioJwt",
-                                "//jwt/auth/login",
+                                "/jwt/auth/login",
                                 "/swagger-ui.html",
                                 "/swagger-ui/**",
                                 "/v3/api-docs",
